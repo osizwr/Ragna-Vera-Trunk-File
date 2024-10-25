@@ -2050,7 +2050,8 @@ ACMD_FUNC(go)
 		char map[MAP_NAME_LENGTH];
 		int x, y;
 	} data[] = {
-		{ MAP_PRONTERA,    156, 191 }, //  0=Prontera
+		{ MAP_VERATEMPLE,    120, 154 }, //  0=Vera Temple
+		{ MAP_PRONTERA,    156, 191 }, //  36=Prontera
 		{ MAP_MORROC,      156,  93 }, //  1=Morroc
 		{ MAP_GEFFEN,      119,  59 }, //  2=Geffen
 		{ MAP_PAYON,       162, 233 }, //  3=Payon
@@ -2058,7 +2059,7 @@ ACMD_FUNC(go)
 #ifdef RENEWAL
 		{ MAP_IZLUDE,      128, 146 }, //  5=Izlude (Renewal)
 #else
-		{ MAP_IZLUDE,      128, 114 }, //  5=Izlude
+		{ MAP_IZLUDE,      128, 146 }, //  5=Izlude
 #endif
 		{ MAP_ALDEBARAN,   140, 131 }, //  6=Al de Baran
 		{ MAP_LUTIE,       147, 134 }, //  7=Lutie
@@ -2132,7 +2133,7 @@ ACMD_FUNC(go)
 	for (i = 0; map_name[i]; i++)
 		map_name[i] = TOLOWER(map_name[i]);
 	// try to identify the map name
-	if (strncmp(map_name, "prontera", 3) == 0) {
+	if (strncmp(map_name, "veratemple", 3) == 0) {
 		town = 0;
 	} else if (strncmp(map_name, "morocc", 4) == 0 ||
 	           strncmp(map_name, "morroc", 4) == 0) {
@@ -2216,6 +2217,8 @@ ACMD_FUNC(go)
 		town = 35;
 	} else if (strncmp(map_name, "lasagna", 2) == 0) {
 		town = 36;
+	} else if (strncmp(map_name, "prontera", 3) == 0) {
+		town = 37;
 	}
 
 	if (town >= 0 && town < ARRAYLENGTH(data))
