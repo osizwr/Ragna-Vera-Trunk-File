@@ -1,4 +1,4 @@
-prontera,187,210,3	script	Broadcaster#1::BC	894,{
+veratemple,100,145,3	script	Broadcaster#1::BC	894,{
 	.@npcname$ = "^FF9300 Broadcaster ^000000";
 	.@header$ = "[^0000ff" + .@npcname$ + "^000000]";
 
