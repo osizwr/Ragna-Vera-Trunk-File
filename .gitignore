@@ -64,6 +64,8 @@ Thumbs.db
 # /lib
 /lib
 
+# /conf/import/
+/conf/import
 # /log/
 /log/*.log
 /log/*.leaks
