@@ -1,0 +1,88 @@
+veratemple,120,138,3	script	Gon	702,{
+
+	set @NPC$,"[ Gon ]";
+	set $@goldMap$, "ordeal_3-2";
+	.@goldEntry = 250000;
+	
+	mes @NPC$;
+	mes "Hey, I know a place where you can find great amount of golds from a rare monster.";
+    next;
+	mes @NPC$;
+	mes "Killing those monster will have you gain a random amount of ^FF0000Gold Points^000000 which you may trade into a real Gold!";
+	next;
+	mes @NPC$;
+	mes "Just a heads up, there are tiny insects that are lurking around the dungeon and they are very strong!";
+	mes "^777777--------------------Warning--------------------^000000";
+	mes "^FF0000If you die inside, you will lose 25% of your total earned points.^000000";
+	next;
+	switch(select("Enter Gold Dungeon:Gold Points Shop:Exchange Points:^FF0000Check my Status^000000")){
+		case 1:
+			mes @NPC$;
+			mes "I need ^FF0000250,000 Zeny^000000, then I will be able to bring you into the gold dungeon.";
+			next;
+			switch(select("Here, I got your zeny.:Let me think first.")){
+				case 1:
+					if (Zeny < .@goldEntry) {
+						mes @NPC$;
+						mes "You don't have enough zeny. I need ^FF0000250,000 Zeny^000000.";
+						message strcharinfo(0),"You don't have enough zeny. Required: "+.@goldEntry+" zeny.";
+						close;
+					} else {
+						mes @NPC$;
+						mes "Here we go!";
+						set Zeny, Zeny - .@goldEntry;
+						next;
+						warp $@goldMap$, 154, 154;
+					}
+					break;
+				case 2:
+					mes @NPC$;
+					mes "Just let me know if you are ready.";
+					close;
+			}
+			break;
+		case 2:
+			mes @NPC$;
+			mes "Case 2 Gold Point Shop";
+			close;
+			break;
+		case 3:
+			mes @NPC$;
+			mes "Case 3 Exchange Points";
+			close;
+			break;
+		case 4:
+			mes @NPC$;
+			mes "Case 4 Check my Status";
+			close;
+			break;
+	}
+	
+OnInit:
+	while(1) {
+		showscript "Gold Room Explorer", getnpcid(0);
+		sleep 1000;
+	}
+	end;
+}
+
+ordeal_3-2,157,158,3	script	Gon::insideGoldRoom	702,{
+
+	set @NPC$,"[ Gon ]";
+	set $@mainTown$, "veratemple";
+	
+	mes @NPC$;
+	mes "Do you wish to leave Gold Dungeon now?";
+	next;
+	switch(select("^FF0000Not yet^000000:Yes")){
+		case 1:
+			close;
+			break;
+		case 2:
+			mes @NPC$;
+			mes "Okay, goodbye!";
+			next;
+			warp $@mainTown$, 120, 154;
+			break;
+	}
+}
