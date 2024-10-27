@@ -35138,6 +35138,7 @@ Body:
       Head_Mid: true
     ArmorLevel: 1
     EquipLevelMin: 80
+    Refineable: true
     View: 568
     Script: |
       if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief || (BaseJob == Job_Taekwon && Class!=Job_Soul_Linker))
