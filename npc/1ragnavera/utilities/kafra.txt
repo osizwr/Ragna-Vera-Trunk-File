@@ -1,0 +1,15 @@
+veratemple,129,150,3	script	Kafra Employee::veratemple	721,{
+ 
+	cutin "kafra_07",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "Welcome! Adventurer.";
+	mes "The Kafra Corporation";
+	mes "will always support the";
+	mes "adventurers of Rune-Midgards";
+	mes "with its excellent service. So";
+	mes "what can I do for you today?";
+	callfunc "F_Kafra",5,0,0,40,800;
+	savepoint "veratemple",120,154,1,1;
+	callfunc "F_KafEnd",0,1,"in the city of Vera";
+}
