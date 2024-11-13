@@ -17,7 +17,7 @@
 //= 3.0 Migrate/Integrate to Global Functions. [mazvi]
 //============================================================
 
-veratemple,108,145,3	script	Platinum Skill NPC	94,{
+veratemple,112,150,5	script	Platinum Skill NPC	94,{
 	mes "[Platinum Skill NPC]";
 	mes "I can give you the special skills available to your job.";
 	mes "Would you like these skills now?";
@@ -31,4 +31,5 @@ veratemple,108,145,3	script	Platinum Skill NPC	94,{
 	mes "[Platinum Skill NPC]";
 	mes "There you go!";
 	close;
+
 }

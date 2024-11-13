@@ -1,0 +1,107 @@
+verabay,170,202,6	shop	Non VIP Fishing Shop	1406,13890:500000000,1750:50000
+verabay,167,194,0	script	Bangus	10065,{
+
+// List of Junk/Other
+setarray .@Catch[0],579,908,909,963,956,6049,918,960,910,938,624,2775;
+
+// 3%
+setarray .@Rare[0],7228,7230,7229,12050,12045,12065,12060,12055,12070,7227; // pwd mdami dito random to
+
+// 5%
+setarray .@Rare1[0],6096,7228,7230,7229; // pwd mdami dito random to
+
+// 10%
+setarray .@Rare2[0],7793,6096; // pwd mdami dito random to
+
+//Fishing rod
+set .@Rod,1712; // Ito ung Rod
+
+//Fishing Lure
+set .@Lure,2758; // Lure
+
+// Bulate
+set .@Bulate,1750; // Bulate ung arrow
+
+//Auto-Fish
+set .@Auto,1;
+//Auto-Fish on Fail
+set .@AutoFail,1;
+Fish:
+	if(countitem(.@Bulate) <1 ) {
+	dispbottom "[Fishing] You need a Rod and Lure.";
+	end;
+	}
+	if (isequipped(.@Rod)) && (isequipped(.@Lure)){
+		specialeffect EF_BUBBLE,"Fishing Hole";
+		soundeffect "fishingrod.wav",0;
+		dispbottom "[Fishing] Casting...";
+		set .@fcast,5;
+			if (isequipped(2550)) { //Fisher's Muffler - wag gamitin
+				set .@fcast,.@fcast - 2;
+			}
+			if (isequipped(2443)) { //Fisher's Boots -- wag gamitin
+				set .@fcast,.@fcast - 1;
+			}
+			if (isequipped(31863)) { //Fresh Fish acce
+				set .@fcast,.@fcast - 2;
+			}
+			if (isequipped(5403)) { //Fish Mouth
+				set .@fcast,.@fcast - 1;
+			}
+		delitem .@Bulate,1;
+		progressbar "ffffff",.@fcast;
+		if (rand(1,10) == 2){
+		getitem 6096,1; //Fish with Blue Back
+		specialeffect2 EF_TEMP_OK;
+		soundeffectall "success.wav",0,strcharinfo(3);
+		mapannounce strcharinfo(3),strcharinfo(0)+" has caught a A Blue fresh water Fish!",bc_map,"0xff77ff";
+		if(.@Auto==1){
+		goto Fish;}else{
+		end;}
+		}
+			if (rand(1,5) == 1) ||(rand(1,5) == 2) || (rand(1,5) == 3) || (rand(1,5) == 4) || (rand(1,5) == 5){
+			setarray .@Catch[0],579,908,909,963,956,6049,918,960,910,938,624;// List of Junk/Other
+			set .@CatchRand,.@Catch[rand(getarraysize(.@Catch))];
+			getitem .@CatchRand,1;
+			}
+			else {
+			dispbottom "[Fishing] Nothing was caught...";
+			if(.@AutoFail == 1){
+			goto Fish;} else{
+			end;}
+			}
+		if (rand(1,20) == 3){
+		set .@RareCatch, .@Rare[rand(getarraysize(.@Rare))];
+		getitem .@RareCatch,1; //Reward
+		mapannounce strcharinfo(3),strcharinfo(0)+" has caught a "+getitemname(.@RareCatch)+"!",bc_map,"0x33CC00";
+		}
+		if (rand(1,15) == 4){
+		set .@Rare1Catch, .@Rare1[rand(getarraysize(.@Rare1))];
+		getitem .@Rare1Catch,1; //Reward
+		mapannounce strcharinfo(3),strcharinfo(0)+" has caught a "+getitemname(.@Rare1Catch)+"!",bc_map,"0x33CC00";
+		}
+		if (rand(1,10) == 5){
+		set .@Rare2Catch, .@Rare2[rand(getarraysize(.@Rare2))];
+		getitem .@Rare2Catch,1; //Reward
+		mapannounce strcharinfo(3),strcharinfo(0)+" has caught a "+getitemname(.@Rare2Catch)+"!",bc_map,"0x33CC00";
+		}
+		if(.@Auto == 1){
+		goto Fish;} else{
+		end;}
+		}
+	else {
+	dispbottom "[Fishing] You need a Rod and Lure.";
+	end;
+	}
+}
+
+//phtownall,83,14,0	duplicate(Fishing Hole)	Fishing Hole#5	10065
+//phtownall,79,14,0	duplicate(Fishing Hole)	Fishing Hole#6	10065
+//phtownall,75,14,0	duplicate(Fishing Hole)	Fishing Hole#7	10065
+//phtownall,71,14,0	duplicate(Fishing Hole)	Fishing Hole#8	10065
+//phtownall,67,14,0	duplicate(Fishing Hole)	Fishing Hole#9	10065
+
+verabay,169,194,0	duplicate(Bangus)	Kandule#1s1	10065
+verabay,171,194,0	duplicate(Bangus)	Tilapia#1s2	10065
+verabay,173,194,0	duplicate(Bangus)	Bisugo#1s3	10065
+verabay,175,194,0	duplicate(Bangus)	Tulingan#1s4	10065

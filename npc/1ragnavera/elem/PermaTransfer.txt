@@ -1,0 +1,47 @@
+ra_temsky,98,149,6	script	Saint Peter	822,{
+	if(#freebies == 0) {
+	mes "[Saint Peter]";
+	mes "Please get your freebies first";
+	close;
+	}
+	mes "[Saint Peter]";
+	mes "Hello adventurer";
+	mes "Please choose race would you like to be";
+	next;
+	//if(race_active==1) { warp "poring_w02",99,71; end; }
+	switch(select("Orc:Aqua:Shadow:Normal"))
+	{
+		case 1:
+				callfunc "BecomeRace", 11;
+				break;
+		case 2:
+				callfunc "BecomeRace", 13;
+				break;
+		case 3:
+				callfunc "BecomeRace", 16;
+				break;
+		case 4:
+				warp "poring_w02",99,71;
+				SavePoint "poring_w02",99,71;
+				close;	
+	}
+end;
+}
+
+function	script	BecomeRace	{		
+	
+	set race_id,getarg(0);	// Race ID 
+	callfunc("setlook2", 6, $RacePals[race_id*4+2]);
+	callfunc("setlook2", 7, $RacePals[race_id*4]);
+	set race_active,1;
+	specialeffect2 248;
+	warp "poring_w02",99,71;
+	SavePoint "poring_w02",99,71;
+	end;
+	
+}
+
+
+ra_temsky	mapflag	noteleport
+ra_temsky	mapflag	nowarp
+ra_temsky	mapflag	nowarpto

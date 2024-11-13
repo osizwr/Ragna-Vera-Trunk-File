@@ -1,0 +1,15 @@
+veratemple,1,1,3	script	Daily_Reset	111,{
+
+OnInit:	
+	disablenpc strnpcinfo(0);
+	end;
+
+OnClock1302:
+    // Reset #goldtime to 360 for all players (including offline)
+    query_sql "UPDATE `acc_reg_num` SET `value` = 360 WHERE `key` = '#goldtime'";
+        
+    // Send a message to all players that the reset has occurred
+    announce "The daily reset has occurred! Gold Room time is now reset.", bc_all;
+
+    end;
+}

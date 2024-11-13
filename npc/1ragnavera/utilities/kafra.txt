@@ -1,6 +1,6 @@
-veratemple,129,150,3	script	Kafra Employee::veratemple	721,{
+veratemple,123,154,3	script	Kafra Employee::veratemple	113,{
  
-	cutin "kafra_07",2;
+	cutin "kafra_05",2;
 	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
 	mes "Welcome! Adventurer.";
@@ -12,4 +12,5 @@ veratemple,129,150,3	script	Kafra Employee::veratemple	721,{
 	callfunc "F_Kafra",5,0,0,40,800;
 	savepoint "veratemple",120,154,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Vera";
+	
 }
