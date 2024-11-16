@@ -1,9 +1,9 @@
 -	pointshop	goldPointsShop	1,#GOLDPOINTS,675:10,671:100,12103:500,674:1000,7621:2500
 
-veratemple,120,138,3	script	Gon	702,{
+veratemple,131,118,3	script	Gon	702,{
 
 	set @NPC$,"[ Gon ]";
-	set $@goldMap$, "ordeal_3-2";
+	set $@goldMap$, "goldroom";
 	set $@mainTown$, "veratemple";
 	.@goldEntry = 250000;
 	
@@ -21,7 +21,7 @@ veratemple,120,138,3	script	Gon	702,{
 	mes "^777777--------------------Warning--------------------^000000";
 	mes "^FF0000If you die inside, you will lose 25% of your total earned points.^000000";
 	next;
-	switch(select("Enter Gold Dungeon:Gold Points Shop:Exchange Points:^FF0000Check my Status^000000")){
+	switch(select("Enter Gold Dungeon:Gold Shop:Exchange Points:^FF0000Check my Status^000000")){
 		case 1:
 			mes @NPC$;
 			mes "I need ^FF0000250,000 Zeny^000000, then I will be able to bring you into the gold dungeon.";
@@ -148,7 +148,7 @@ OnInit:
 	.max_goldtime = 360;
 	while (1) {
 		showscript "Gold Room ["+.@count+"]", getnpcid(0);
-		.@count = getmapusers("ordeal_3-2");
+		.@count = getmapusers("goldroom");
 		if (.@count != .count) {
 			.count = .@count;
 			showscript "Gold Room ["+.@count+"]", getnpcid(0);
@@ -159,7 +159,7 @@ end;
 }
 
 // Inside the Gold Dungeon NPC to exit or display time left
-ordeal_3-2,157,158,3	script	Gon::insideGoldRoom	702,{
+goldroom,157,158,3	script	Gon::insideGoldRoom	702,{
 	set @NPC$,"[ Gon ]";
 	set $@mainTown$, "veratemple";
 
@@ -178,7 +178,7 @@ ordeal_3-2,157,158,3	script	Gon::insideGoldRoom	702,{
 	}
 }
 
-ordeal_3-2,154,154,150	script	goldtimes#ordeal_3-2	110,150,150,{
+goldroom,154,154,150	script	goldtimes#goldroom	110,150,150,{
 
 OnInit:
     bindatcmd "gtime", strnpcinfo(3) + "::OnStatusCheck";
@@ -216,11 +216,11 @@ OnTouch:
             end;  // Stop the script after warp
         }
 
-        // Recheck if the player is still in the "ordeal_3-2" map
+        // Recheck if the player is still in the "goldroom" map
         getmapxy(@mapname$, @mapx, @mapy, BL_PC, "" + strcharinfo(0) + "");
 
-        // If the player is not in the "ordeal_3-2" map, stop the timer and exit the loop
-        if (@mapname$ != "ordeal_3-2") {
+        // If the player is not in the "goldroom" map, stop the timer and exit the loop
+        if (@mapname$ != "goldroom") {
             dispbottom "You have left the Gold Room. Time deduction stopped.";
             @stma = 0;  // Stop the timer and exit the loop
         }
@@ -259,13 +259,13 @@ OnClock0000:
 -	script	GOLD_POINTS	-1,{
 
 	OnInit:
-		.map$ = "ordeal_3-2";
+		.map$ = "goldroom";
         setarray .gold_amount,1,3;
 		.golddie = 25;
 	end;
 
 	OnNPCKillEvent:
-		setarray .goldMonster, 1369; // Add monster IDs to this list
+		setarray .goldMonster, 2992; // Add monster IDs to this list
 
 		for (.@i = 0; .@i < getarraysize(.goldMonster); .@i++) {
 			if (killedrid == .goldMonster[.@i] && rand(100) < 50){
@@ -277,7 +277,7 @@ OnClock0000:
 	end;
 	
 	OnPCDieEvent:
-		if (strcharinfo(3) != "ordeal_3-2" || killerrid == getcharid(3)) end;
+		if (strcharinfo(3) != "goldroom" || killerrid == getcharid(3)) end;
 		getmapxy .@map$, .@x, .@y;
 		set #GOLDPOINTS, #GOLDPOINTS - (#GOLDPOINTS/4);
 		dispbottom "You've died.";
@@ -285,24 +285,24 @@ OnClock0000:
 	end;
 	}
 
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,100,35000,240000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,100,40000,260000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,100,45000,280000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,100,50000,300000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,150,85000,320000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,200,90000,340000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,200,95000,360000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,425,100000,400000
-ordeal_3-2,0,0,0,0	monster	Peco Peco (Gold)	1369,425,105000,450000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,100,35000,240000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,100,40000,260000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,100,45000,280000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,100,50000,300000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,150,85000,320000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,200,90000,340000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,200,95000,360000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,425,100000,400000
+goldroom,0,0,0,0	monster	Corrupted Lude	2992,425,105000,450000
 
-ordeal_3-2	mapflag	nobranch
-ordeal_3-2	mapflag	novending
-ordeal_3-2	mapflag	nowarp
-ordeal_3-2	mapflag	nowarpto
-ordeal_3-2	mapflag	noicewall
-ordeal_3-2	mapflag	nomemo
-ordeal_3-2	mapflag	nosave
-ordeal_3-2	mapflag	noreturn
-ordeal_3-2	mapflag	nodrop
-ordeal_3-2	mapflag	nomobloot
-ordeal_3-2	mapflag	nomvploot
+goldroom	mapflag	nobranch
+goldroom	mapflag	novending
+goldroom	mapflag	nowarp
+goldroom	mapflag	nowarpto
+goldroom	mapflag	noicewall
+goldroom	mapflag	nomemo
+goldroom	mapflag	nosave
+goldroom	mapflag	noreturn
+goldroom	mapflag	nodrop
+goldroom	mapflag	nomobloot
+goldroom	mapflag	nomvploot

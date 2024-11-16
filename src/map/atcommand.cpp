@@ -2051,7 +2051,6 @@ ACMD_FUNC(go)
 		int x, y;
 	} data[] = {
 		{ MAP_VERATEMPLE,    120, 154 }, //  0=Vera Temple
-		{ MAP_PRONTERA,    156, 191 }, //  36=Prontera
 		{ MAP_MORROC,      156,  93 }, //  1=Morroc
 		{ MAP_GEFFEN,      119,  59 }, //  2=Geffen
 		{ MAP_PAYON,       162, 233 }, //  3=Payon
@@ -2096,6 +2095,7 @@ ACMD_FUNC(go)
 		{ MAP_MALAYA,      242, 211 }, // 34=Malaya Port
 		{ MAP_ECLAGE,      110,  39 }, // 35=Eclage
 		{ MAP_LASAGNA,     193, 182 }, // 36=Lasagna
+		{ MAP_PRONTERA,    156, 191 }, //  37=Prontera
 	};
 
 	nullpo_retr(-1, sd);

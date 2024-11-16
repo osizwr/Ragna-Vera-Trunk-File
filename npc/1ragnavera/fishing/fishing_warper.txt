@@ -1,4 +1,4 @@
-veratemple,48,191,4	script	Fishing Area	577,{
+veratemple,43,147,4	script	Fishing Area	577,{
 	mes "[ Baryo Boy ]";
 	mes "Do you want to go to catch some fish?";
 	if(select("Yes,please","No")==2) {

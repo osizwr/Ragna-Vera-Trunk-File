@@ -1,29 +1,114 @@
-veratemple,131,122,3	script	Sign Board#veratemple	857,{
-	set @NPC$,"[ Sign Board ]";
+-	shop	PickShop	-1,6010:10000,5031:1000000
+
+veratemple,108,122,5	script	Hermoining	848,{
+
+	set @NPC$,"[ Hermoining ]";
+	set $@miningMap$, "mining";
 	
 	mes @NPC$;
-	mes "I'm just a board, I should not talk.";
-	if(getgmlevel() > 99){
-		next;
-		switch(select("Reset Message:Input Message")){
-			case 1:
-				close2;
-				while (1) {
-					showscript "Current GOTM Prize Pool: "+.@inputPrizePool$+"", getnpcid(0);
-					sleep 1000;
-					end;
-				}
-			case 2:
-			mes "Please input your message.";
+	mes "Hiya! I'm the master of Mining, ^880000Hermoining^000000!";
+	next;
+MenuMining:
+	switch(select("Enter Mining Tunnel:Mining Shop:^008000Information^000000")){
+		case 1:
+			mes @NPC$;
+			mes "I need ^FF0000250,000 Zeny^000000, then I will be able to bring you into the Mining Tunnel.";
 			next;
-			input .@inputPrizePool$;
-			close2;
-			while (1) {
-				showscript "Current GOTM Prize Pool: "+.@inputPrizePool$+"", getnpcid(0);
-				sleep 1000;
+			switch(select("Here, I got your zeny.:Let me think first.")){
+				case 1:
+				.passcode_length = 8;
+
+					// Generate a random passcode with the specified characters and length
+					setarray passcode$, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+						"A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+						"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"; // Add the special characters here
+
+					set .@correct_passcode$, "";
+
+					for (.@i = 0; .@i < .passcode_length; ++.@i) {
+						.@index = rand(getarraysize(passcode$) - 1);
+						.@correct_passcode$ += passcode$[.@index];
+					}
+					
+					mes @NPC$;
+					mes "Please enter the following phrase to enter: ^FF0000" + .@correct_passcode$;
+					next;	
+					input .@phrase$;
+
+					if (.@phrase$ != .@correct_passcode$) {
+						mes @NPC$;
+						mes "What you entered did not match the passphrase.";
+						mes "Please speak with me again to re-enter the phrase.";
+						close;
+					}
+					if (Zeny < 250000|| #goldtime <= 1) {
+						mes @NPC$;
+						mes "You don't have enough ^FF0000zeny^000000 or dont have enough ^FF0000time left^000000.";
+						close;
+					} else {
+						mes @NPC$;
+						mes "Here we go!";
+						set Zeny, Zeny - 250000;
+						next;
+						warp $@miningMap$, 154, 154;
+						end;
+					}
+					break;
+				case 2:
+					mes @NPC$;
+					mes "Just let me know if you are ready.";
+					close;
 			}
-		}
-		
+			break;
+		case 2:
+			callshop "PickShop";
+			close2;
+			end;
+		case 3:
+			mes @NPC$;
+			mes "While inside the map, you'll be able to mine ores which can be used to upgrade equipments.";
+			next;
+			mes @NPC$;
+			mes "You can obtain the following:";
+			mes " -  ^008000Rough Oridecon^000000 50~70%";
+			mes " -  ^0000ffRough Elunium^000000 50~70%";
+			mes " -  ^964B00Rough Rhodonite^000000 40~60%";
+			mes " -  ^ff0000Rough Acerium^000000 10~30%";
+			next;
+			mes @NPC$;
+			mes "You can obtain the following:";
+			mes " -  ^008000Oridecon^000000 10~15%";
+			mes " -  ^0000ffElunium^000000 10~15%";
+			mes " -  ^964B00Rhodonite^000000 5~10%";
+			mes " -  ^ff0000Acerium^000000 1~5%";
+			next;
+			mes @NPC$;
+			mes "Ready to enter the tunnel?";
+			next;
+			goto MenuMining;
 	}
-	end;
 }
+
+veratemple,117,125,3	script	Rhodonite Crystal	1915,{
+	
+	callfunc "crystal_func";
+}
+
+
+
+mining,0,0,0,0	monster	Sapphire Guardian	1398,50,35000,240000
+mining,0,0,0,0	monster	Ruby Guardian	1397,50,35000,240000
+mining,0,0,0,0	monster	Emerald Guardian	1396,50,35000,240000
+mining,0,0,0,0	monster	Citrine Guardian	1951,50,35000,240000
+
+mining	mapflag	nobranch
+mining	mapflag	novending
+mining	mapflag	nowarp
+mining	mapflag	nowarpto
+mining	mapflag	noicewall
+mining	mapflag	nomemo
+mining	mapflag	nosave
+mining	mapflag	noreturn
+mining	mapflag	nodrop
+mining	mapflag	nomobloot
+mining	mapflag	nomvploot

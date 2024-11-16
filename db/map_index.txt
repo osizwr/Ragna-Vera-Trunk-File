@@ -1274,3 +1274,5 @@ iz_in_d
 koe_vs_prt	1250
 veratemple	1251
 verabay	1252
+goldroom	1253
+mining	1254

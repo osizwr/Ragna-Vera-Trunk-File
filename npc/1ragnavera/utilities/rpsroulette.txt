@@ -1,4 +1,4 @@
-veratemple,120,130,3	script	Crazy Boris	828,{
+veratemple,87,153,3	script	Crazy Boris	828,{
 
 	set .@counter,1;
 	set @NPC$,"[ Boris ]";
@@ -115,7 +115,7 @@ KILL:
 	mes @NPC$;
 	mes "Congratulations! You have won...";
 	set Zeny, Zeny - 10000000;
-	switch( rand( 1,21 ) ) {
+	switch( rand( 1,11 ) ) {
 		case 1: setarray .@reward[0], 5,984; break;
 		case 11: setarray .@reward[0],100,601; break;	// 100x Fly Wings
 		case 4: setarray .@reward[0],  8,603; break;	// 8x Old Blue Box
@@ -126,16 +126,6 @@ KILL:
 		case 10: setarray .@reward[0],20,505; break;	// 20x Blue Potion
 		case 2: setarray .@reward[0], 1,14232; break;
 		case 9: setarray .@reward[0], 5,985; break;
-		case 12: setarray .@reward[0], 5,984; break;
-		case 13: setarray .@reward[0],100,601; break;	// 100x Fly Wings
-		case 14: setarray .@reward[0],  8,603; break;	// 8x Old Blue Box
-		case 15: setarray .@reward[0],  4,617; break;	// 4x Old Violet Box
-		case 16: setarray .@reward[0],  1,616; break;	// 1x Old Card Album
-		case 17: setarray .@reward[0], 10,604; break;	// 10x Dead Branch
-		case 18: setarray .@reward[0],  3,969; break;	// 3x Gold
-		case 19: setarray .@reward[0],20,505; break;	// 20x Blue Potion
-		case 20: setarray .@reward[0], 1,14232; break;
-		case 21: setarray .@reward[0], 5,985; break;
 		case 3: setarray .@reward[0], 1,30000;
 			announce "" + strcharinfo(0) + " got a 1 x Gold Plated Coin", 0, 0xFF5C00;
 	}

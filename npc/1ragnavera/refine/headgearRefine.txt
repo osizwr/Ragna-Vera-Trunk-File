@@ -87,8 +87,8 @@ function	script	headgearRefine	{
 
     // Set requirement based on refine level
         $@refinePrice = 10000000 + ( ( .@equip_refine ) * 10000000 );
-		@aceriumid = 502;	// Acerium ID
-		.@acerium_required = 0;
+		@rhodoniteid = 30006;	// rhodonite ID
+		.@rhodonite_required = 0;
 
 	if( .@display_info ){
 		mes "[ Blacksmith: Brokkr ]";
@@ -97,34 +97,34 @@ function	script	headgearRefine	{
 		mes "Zeny Requirement: ^FF0000"+$@refinePrice+"^000000";
 		switch (.@target_refine) {
 			case 1:
-				.@acerium_required = 10;
+				.@rhodonite_required = 10;
 				break;
 			case 2:
-				.@acerium_required = 15;
+				.@rhodonite_required = 15;
 				break;
 			case 3:
-				.@acerium_required = 20;
+				.@rhodonite_required = 20;
 				break;
 			case 4:
-				.@acerium_required = 25;
+				.@rhodonite_required = 25;
 				break;
 			case 5:
 			case 6:
 			case 7:
 			case 8:
-				.@acerium_required = 30;
+				.@rhodonite_required = 30;
 				break;
 			case 9:
-				.@acerium_required = 40;
+				.@rhodonite_required = 40;
 				break;
 			case 10:
-				.@acerium_required = 50;
+				.@rhodonite_required = 50;
 				break;
 			default:
 				// Handle cases where the target_refine is less than 1 or greater than 10
 				message strcharinfo(0), "Invalid refine level.";
 		}
-		mes "Item Requirement: ^FF0000"+.@acerium_required+"^000000 ^FF0000"+getitemname(@aceriumid)+"^000000";
+		mes "Item Requirement: ^FF0000"+.@rhodonite_required+"^000000 ^FF0000"+getitemname(@rhodoniteid)+"^000000";
 		if( .@success_rate < 50 ){
 			if( .@arg[8] ){
 				mes "^777777--------------------Optional--------------------^000000";
@@ -144,10 +144,10 @@ function	script	headgearRefine	{
         message strcharinfo(0),"You don't have enough zeny. Required: "+$@refinePrice+" zeny.";
         close;
     }
-	if (countitem(@aceriumid) < .@acerium_required) {
+	if (countitem(@rhodoniteid) < .@rhodonite_required) {
 		mes "[ Blacksmith: Brokkr ]";
 		mes "Stop wasting my time!";
-        message strcharinfo(0),"You don't have enough Acerium. Required: "+.@acerium_required+" "+getitemname(@aceriumid)+".";
+        message strcharinfo(0),"You don't have enough Rhodonite. Required: "+.@rhodonite_required+" "+getitemname(@rhodoniteid)+".";
         close;
     }
 
@@ -174,7 +174,7 @@ function	script	headgearRefine	{
                 getitem2 .@equip_id,1,1,.@target_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
                 message strcharinfo(0),"Successfully refined to +"+.@target_refine+" "+getitemname( .@equip_id );
                 set Zeny, Zeny - $@refinePrice;
-				delitem @aceriumid,.@acerium_required;
+				delitem @rhodoniteid,.@rhodonite_required;
                 specialeffect2 EF_REFINEOK;
                 close;
             } else if( .@arg[6] && .@arg[3] && rand( 100 ) < .@arg[7] ){
@@ -183,11 +183,11 @@ function	script	headgearRefine	{
                 getitem2 .@equip_id,1,1,.@target_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
                 message strcharinfo(0),"Failed and refine count dropped to +"+.@target_refine+" "+getitemname( .@equip_id );
                 set Zeny, Zeny - $@refinePrice;
-				delitem @aceriumid,.@acerium_required;
+				delitem @rhodoniteid,.@rhodonite_required;
             } else {
                 message strcharinfo(0),"Failed to refine and destroyed "+getitemname( .@equip_id );
                 set Zeny, Zeny - $@refinePrice;
-				delitem @aceriumid,.@acerium_required;
+				delitem @rhodoniteid,.@rhodonite_required;
             }
             specialeffect2 EF_REFINEFAIL;
         }

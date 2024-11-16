@@ -162,9 +162,9 @@ veratemple,83,148,5	script	Credit Agent	833,{
 			mes @NPC$;
 			mes "Very well then.";
 			mes "All you need to do is bring me the following:";
-			mes "- 1 x Gold Plated Coin";
-			mes "- 100 x Item";
-			mes "- 100,000,000 Zeny";
+			mes " -  1 x Gold Plated Coin";
+			mes " -  100 x Item";
+			mes " -  100,000,000 Zeny";
 			next;
 			mes @NPC$;
 			mes "Here's a tip, look for Crazy Boris somewhere here at the temple.";
