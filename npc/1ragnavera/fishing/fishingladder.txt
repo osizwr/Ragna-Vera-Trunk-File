@@ -1,4 +1,3 @@
-
 verabay,147,195,5	script	Fishing Ladder Board	857,{
 goto mainmenu; mainmenu: mes "[ ^aa557fFishing Ladder Board^000000 ]"; mes "You check the fishing ladder board."; next;
 menu "[ ^aa557fInformation^000000 ]",FInfo,"[ ^ff0000Ranking^000000 ]",FRank,"[ ^aaaa7fExpedition^000000 ]",FExpe; 

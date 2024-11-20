@@ -15,7 +15,7 @@ setarray $@FishingEquipsNeed[0],30016;       	// ITO NAMAN YUNG KELANGAN PARA MA
 set $@FishingCastTime,2; // SPEED NG CASTING BAR
 set $@FishingItemRate,100; // WAG GALAWIN
 set $@FishingItemSP1Rate,30; // RATE NG LEVEL 1 REWARD    
-set $@FishingItemSP2Rate,20; // RATE NG LEVEL 2 REWARD      
+set $@FishingItemSP2Rate,20; // RATE NG LEVEL 2 REWARD
 set $@FishingItemSP3Rate,3; // RATE NG LEVEL 3 REWARD
 
 

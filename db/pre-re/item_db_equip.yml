@@ -24053,12 +24053,12 @@ Body:
   - Id: 2775
     AegisName: Lure
     Name: Lure
-    Type: Armor
+    Type: Etc
     Buy: 20
     Weight: 100
-    Locations:
-      Both_Accessory: true
-    ArmorLevel: 1
+#    Locations:
+#      Both_Accessory: true
+#    ArmorLevel: 1
   - Id: 2776
     AegisName: Cool_Towel
     Name: Adventurer's Trusty Towel
