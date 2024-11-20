@@ -16,7 +16,7 @@
 //= 2.0 Added 4th class [Lemongrass]
 //============================================================
 
-veratemple,106,145,3	script	Job Master	123,{
+veratemple,116,154,5	script	Job Master	733,{
 function Get_Job_Equip;
 // Checks if the Player has the required level.
 // closes if not, returns if yes
@@ -538,6 +538,6 @@ OnInit:
 		.BabyExpanded = false;
 		.BabySummoner = false;
 	}
-	end;
+	
 }
 

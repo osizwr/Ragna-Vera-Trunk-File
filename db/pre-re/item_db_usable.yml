@@ -1100,7 +1100,7 @@ Body:
     Name: Yggdrasil Berry
     Type: Healing
     Buy: 5000
-    Weight: 300
+    Weight: 1
     Flags:
       BuyingStore: true
     Delay:

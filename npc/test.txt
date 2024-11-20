@@ -1,120 +1,65 @@
-veratemple,120,138,3	script	Gon	702,{
+prontera,150,150,5	script	Redeem NPC	757,{
 
-	set @NPC$,"[ Gon ]";
-	set $@goldMap$, "ordeal_3-2";
-	.@goldEntry = 250000;
-	.@maxTime = 1; // For testing, setting to 5 minutes per day
-	.@currentDay = gettime(7); // Current day of the year
-
-	// Check if it's a new day or if #goldDungeonTime hasn't been initialized
-	if (#lastVisitDay != .@currentDay) {
-		set #goldDungeonTime, .@maxTime; // Reset time if it's a new day
-		set #lastVisitDay, .@currentDay; // Update last visit day
-		set #goldStartTime, 0; // Reset start time
-	}
-
-	mes @NPC$;
-	mes "Hey, I know a place where you can find a great amount of gold from a rare monster.";
-	next;
-	mes @NPC$;
-	mes "Killing those monsters will have you gain a random amount of ^FF0000Gold Points^000000 which you may trade into real Gold!";
-	next;
-	mes @NPC$;
-	mes "Just a heads up, there are tiny insects lurking around the dungeon, and they are very strong!";
-	mes "^777777--------------------Warning--------------------^000000";
-	mes "^FF0000If you die inside, you will lose 25% of your total earned points.^000000";
-	next;
-	switch(select("Enter Gold Dungeon:Gold Points Shop:Exchange Points:^FF0000Check my Status^000000")){
-		case 1:
-			mes @NPC$;
-			if (#goldDungeonTime <= 0) {
-				mes "You have no time left for today to enter the Gold Dungeon.";
-				close;
-			}
-			mes "I need ^FF0000250,000 Zeny^000000, and I'll bring you into the Gold Dungeon. You have ^FF0000" + #goldDungeonTime + " minutes^000000 left for today.";
-			next;
-			switch(select("Here, I got your zeny.:Let me think first.")){
-				case 1:
-					if (Zeny < .@goldEntry) {
-						mes @NPC$;
-						mes "You don't have enough Zeny. I need ^FF0000250,000 Zeny^000000.";
-						message strcharinfo(0),"You don't have enough Zeny. Required: "+.@goldEntry+" Zeny.";
-						close;
-					} else {
-						mes @NPC$;
-						mes "Here we go!";
-						set Zeny, Zeny - .@goldEntry;
-						next;
-						
-						// Track the entry time
-						set #goldStartTime, gettimetick(2);
-						
-						warp $@goldMap$, 154, 154;
-					}
-					break;
-				case 2:
-					mes @NPC$;
-					mes "Just let me know if you're ready.";
-					close;
-			}
-			break;
-		case 2:
-			mes @NPC$;
-			mes "Case 2 Gold Point Shop";
-			close;
-			break;
-		case 3:
-			mes @NPC$;
-			mes "Case 3 Exchange Points";
-			close;
-			break;
-		case 4:
-			mes @NPC$;
-			// Calculate remaining time when the player checks their status
-			if (#goldStartTime > 0) {
-				.@elapsedTime = (gettimetick(2) - #goldStartTime) / 60; // Time in minutes
-				set #goldDungeonTime, #goldDungeonTime - .@elapsedTime;
-				set #goldStartTime, gettimetick(2); // Reset entry time
-			}
-			mes "You have ^FF0000" + #goldDungeonTime + " minutes^000000 left to enter the dungeon today.";
-			close;
-			break;
-	}
+if (getgmlevel() == 100) {
+	goto OnGMCreateCode;
 }
 
-ordeal_3-2,157,158,3	script	Gon::insideGoldRoom	702,{
-	set @NPC$,"[ Gon ]";
-	set $@mainTown$, "veratemple";
-	
-	mes @NPC$;
-	mes "Do you wish to leave the Gold Dungeon now?";
-	next;
-	switch(select("^FF0000Not yet^000000:Yes")){
-		case 1:
-			close;
-			break;
-		case 2:
-			mes @NPC$;
-			mes "Okay, goodbye!";
-			
-			// Calculate time spent inside upon exit
-			.@elapsedTime = (gettimetick(2) - #goldStartTime) / 60; // Time in minutes
-			set #goldDungeonTime, #goldDungeonTime - .@elapsedTime;
-			set #goldStartTime, 0; // Reset start time
-			next;
-			warp $@mainTown$, 120, 154;
-			break;
-	}
+mes "[Redeem NPC]";
+mes "Please enter your redeem code:";
+input .@code$;
 
-OnTimer60000:
-	// Deduct one minute every minute while in the dungeon and check for time expiration
-	set #goldDungeonTime, #goldDungeonTime - 1;
-	if (#goldDungeonTime <= 0) {
-		message strcharinfo(0),"Your time is up! Warping out.";
-		warp $@mainTown$, 120, 154; // Force warp to main town if time expires
-		detachnpctimer;
+// Check if the code exists
+query_sql("SELECT item_id, item_quantity FROM redeem_codes WHERE code = ?", .@code$, .@item_id, .@item_quantity);
+
+if (.@item_id) {
+	// Check if the player already redeemed it (by account or IP)
+	query_sql("SELECT 1 FROM redeem_redemptions WHERE code = ? AND (account_id = ? OR ip_address = ?)", 
+		.@code$, getcharid(3), #last_ip, .@already_redeemed);
+
+	if (.@already_redeemed) {
+		mes "^FF0000[ERROR]^000000 You have already redeemed this code or someone with the same IP has.";
+	} else {
+		// Redeem the code
+		getitem .@item_id, .@item_quantity;
+		query_sql("INSERT INTO redeem_redemptions (code, account_id, ip_address) VALUES (?, ?, ?)", 
+			.@code$, getcharid(3), #last_ip);
+		mes "Congratulations! You have received your reward.";
+		mes "Item: ^00FF00" + getitemname(.@item_id) + "^000000 x" + .@item_quantity;
 	}
-	stopnpctimer;
-	end;
+} else {
+	mes "^FF0000[ERROR]^000000 Invalid or expired code.";
 }
+
+close;
+
+OnGMCreateCode:
+mes "[GM Redeem Code Creator]";
+mes "Enter the code to create:";
+input .@new_code$;
+
+mes "Enter the item ID:";
+input .@item_id;
+
+mes "Enter the item quantity:";
+input .@item_quantity;
+
+if (.@item_quantity <= 0 || .@item_id <= 0) {
+	mes "^FF0000[ERROR]^000000 Invalid item or quantity.";
+	close;
+}
+
+// Check if the code already exists
+query_sql("SELECT 1 FROM redeem_codes WHERE code = ?", .@new_code$, .@exists);
+
+if (.@exists) {
+	mes "^FF0000[ERROR]^000000 This code already exists.";
+} else {
+	query_sql("INSERT INTO redeem_codes (code, item_id, item_quantity, gm_creator) VALUES (?, ?, ?, ?)", 
+		.@new_code$, .@item_id, .@item_quantity, strcharinfo(0));
+	mes "Code successfully created!";
+	mes "Code: ^00FF00" + .@new_code$ + "^000000";
+	mes "Item: ^00FF00" + getitemname(.@item_id) + "^000000 x" + .@item_quantity;
+}
+close;
+
 }

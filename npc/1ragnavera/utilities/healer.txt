@@ -16,7 +16,7 @@
 -	script	Healer	-1,{
 
 	.@Price = 0;	// Zeny required for heal
-	.@Buffs = 0;	// Also buff players? (1: yes / 0: no)
+	.@Buffs = 1;	// Also buff players? (1: yes / 0: no)
 	.@Delay = 0;	// Heal delay, in seconds
 
 	if (@HD > gettimetick(2))
@@ -36,6 +36,23 @@
 		sc_start SC_INCREASEAGI,240000,10;
 		specialeffect2 EF_BLESSING;
 		sc_start SC_BLESSING,240000,10;
+		
+		// for FCP buffs
+		specialeffect2 300;
+		sc_start SC_CP_WEAPON,600000,5;
+		sc_start SC_CP_HELM,600000,5;
+		sc_start SC_CP_ARMOR,600000,5;
+		sc_start SC_CP_SHIELD,600000,5;
+		
+		// for +10 food stats
+		sc_start SC_STRFOOD,1200000,10;
+		sc_start SC_AGIFOOD,1200000,10;
+		sc_start SC_DEXFOOD,1200000,10;
+		sc_start SC_VITFOOD,1200000,10;
+		sc_start SC_INTFOOD,1200000,10;
+		sc_start SC_LUKFOOD,1200000,10;
+		
+		
 	}
 	if (.@Delay)
 		@HD = gettimetick(2) + .@Delay;
@@ -84,4 +101,4 @@ ecl_in01,45,60,4	duplicate(Healer)	Healer#ecl	909
 malangdo,132,114,6	duplicate(Healer)	Healer#mal	909
 malaya,227,204,6	duplicate(Healer)	Healer#ma	909
 mora,55,152,4	duplicate(Healer)	Healer#mora	909
-veratemple,135,145,3	duplicate(Healer)	Healer#veratemple	742
+veratemple,117,150,3	duplicate(Healer)	Healer#veratemple1	950

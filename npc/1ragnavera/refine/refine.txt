@@ -10,13 +10,13 @@ veratemple,189,149,3	script	Brokkr	448,{
 	next;
 	switch(select("Armor:Headgear:Weapon")){
 		case 1:
-			callfunc( "armorRefine",198,0,10,1,1,0,-1,100,10,512 );
+			callfunc( "armorRefine",198,0,10,1,1,0,-1,100,10,30004 );
 			break;
 		case 2:
-			callfunc( "headgearRefine",48,0,10,1,1,0,-1,100,10,512 );
+			callfunc( "headgearRefine",48,0,10,1,1,0,-1,100,10,30004 );
 			break;
 		case 3:
-			callfunc( "weaponRefine",256,0,10,1,1,0,-1,100,10,512 );
+			callfunc( "weaponRefine",256,0,10,1,1,0,-1,100,10,30004 );
 			break;
 	}
 

@@ -488,7 +488,7 @@ Header:
 
 # Non-kRO Eden Group Mark effect
 #=============================================================
-#  - Id: 22508
+#     - Id: 22508
 #    AegisName: Para_Team_Mark_
 #    Name: Eden Group Mark
 #    Type: Delayconsume
@@ -545,3 +545,213 @@ Header:
 #    Gender: Female
 #  - Id: 5735
 #    Gender: Female
+
+Body:
+  - Id: 30000
+    AegisName: Gold_Plated_Coin
+    Name: Gold Plated Coin
+    Type: Etc
+    Buy: 100
+    Weight: 100
+  - Id: 30001
+    AegisName: RagnarokName_Credit
+    Name: RagnarokName Credit
+    Type: Etc
+    Buy: 100000000
+    Sell: 10000000
+    Weight: 1
+  - Id: 30002
+    AegisName: RagnarokName_Credit_Card
+    Name: RagnarokName Credit Card
+    Type: Etc
+    Buy: 100000000
+    Sell: 100
+    Weight: 1
+    Trade:
+     Override: 99
+     NoDrop: true
+     NoTrade: true
+     TradePartner: true
+     NoSell: true
+     NoCart: true
+     NoGuildStorage: true
+     NoMail: true
+     NoAuction: true
+  - Id: 30003
+    AegisName: Monster_Arena_Permit
+    Name: Monster Arena Permit
+    Type: Etc
+    Buy: 1000
+    Sell: 100
+    Weight: 1
+    Trade:
+     Override: 99
+     NoDrop: true
+     NoTrade: true
+     TradePartner: true
+     NoSell: true
+     NoCart: true
+     NoGuildStorage: true
+     NoMail: true
+     NoAuction: true
+  - Id: 30004
+    AegisName: Acerium_Stone
+    Name: Acerium
+    Type: Etc
+    Buy: 550
+    Weight: 200
+  - Id: 30005
+    AegisName: Rough_Acerium_Stone
+    Name: Rough Acerium
+    Type: Etc
+    Buy: 550
+    Weight: 200
+  - Id: 30006
+    AegisName: Rhodonite_Stone
+    Name: Rhodonite
+    Type: Etc
+    Buy: 550
+    Weight: 200
+  - Id: 30007
+    AegisName: Rough_Rhodonite_Stone
+    Name: Rough Rhodonite
+    Type: Etc
+    Buy: 550
+    Weight: 200
+  - Id: 30008
+    AegisName: Fisherman's_Rod
+    Name: Small Fishing Rod
+    Type: Weapon
+    SubType: Dagger
+    Buy: 2500
+    Weight: 600
+    Attack: 29
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: false
+    Trade:
+     Override: 99
+     NoDrop: true
+     NoTrade: true
+     TradePartner: true
+     NoSell: true
+     NoCart: true
+     NoGuildStorage: true
+     NoMail: true
+     NoAuction: true
+  - Id: 30009
+    AegisName: Non_Premium_Fishing_License
+    Name: Non Premium Fishing License
+    Type: Armor
+    Buy: 30000
+    Weight: 100
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Trade:
+     Override: 99
+     NoDrop: true
+     NoTrade: true
+     TradePartner: true
+     NoSell: true
+     NoCart: true
+     NoGuildStorage: true
+     NoMail: true
+     NoAuction: true
+  - Id: 30010
+    AegisName: Non_Premium_Fishing_Lure
+    Name: Non Premium Fishing Lure
+    Type: Etc
+    Buy: 70
+    Weight: 10
+  - Id: 30011
+    AegisName: Fisherman's_Hat
+    Name: Fisherman's Hat
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 2
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 50
+    Refineable: false
+    View: 339
+  - Id: 30012
+    AegisName: Fisherman's_Jacket
+    Name: Fisherman's Jacket
+    Type: Armor
+    Buy: 200
+    Weight: 200
+    Defense: 2
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: false
+  - Id: 30013
+    AegisName: Fisherman's_Muffler
+    Name: Fisherman's Muffler
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: false
+  - Id: 30014
+    AegisName: Fisherman's_Shoes
+    Name: Fisherman's Boots
+    Type: Armor
+    Buy: 10
+    Weight: 250
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+  - Id: 30015
+    AegisName: Premium_Fishing_Lure
+    Name: Premium Fishing Lure
+    Type: Etc
+    Buy: 70
+    Weight: 10
+  - Id: 30016
+    AegisName: Premium_Fisherman's_Rod
+    Name: Premium Fishing Rod
+    Type: Weapon
+    SubType: Dagger
+    Buy: 2500
+    Weight: 600
+    Attack: 29
+    Range: 5
+    Slots: 3
+    Jobs:
+      All: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 1
+    EquipLevelMin: 1
+    Refineable: false
+    Trade:
+     Override: 99
+     NoDrop: true
+     NoTrade: true
+     TradePartner: true
+     NoSell: true
+     NoCart: true
+     NoGuildStorage: true
+     NoMail: true
+     NoAuction: true

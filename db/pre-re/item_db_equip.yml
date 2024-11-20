@@ -25335,18 +25335,7 @@ Body:
     Weight: 1500
     Defense: 4
     Jobs:
-      Acolyte: true
-      Alchemist: true
-      Assassin: true
-      Blacksmith: true
-      Crusader: true
-      Knight: true
-      Merchant: true
-      Monk: true
-      Priest: true
-      Rogue: true
-      Swordman: true
-      Thief: true
+      All: true
     Locations:
       Head_Top: true
     ArmorLevel: 1

@@ -1,4 +1,4 @@
-veratemple,100,145,3	script	Broadcaster#1::BC	894,{
+veratemple,134,140,3	script	Broadcaster#1::BC	721,{
 	.@npcname$ = "^FF9300 Broadcaster ^000000";
 	.@header$ = "[^0000ff" + .@npcname$ + "^000000]";
 
@@ -217,5 +217,11 @@ OnInit:
 	.broadcastfee = 3000000;
 	.auto_broadcastfee = 500000;
 	initnpctimer;
-	end;
+
+	while (1) {
+		showscript "Broadcaster", getnpcid(0);
+
+		sleep 1000;
+	}
+end;
 }

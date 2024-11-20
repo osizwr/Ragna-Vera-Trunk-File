@@ -1144,3 +1144,35 @@ Header:
 #      - Item: Zombie_Master_Card
 #        Rate: 1
 #        StealProtected: true
+
+Body:
+  - Id: 2992
+    AegisName: XM_LUDE
+    Name: Creepy Demon
+    Level: 140
+    Hp: 4444
+    BaseExp: 666
+    JobExp: 732
+    Attack: 444
+    Attack2: 444
+    Defense: 90
+    MagicDefense: 44
+    Str: 44
+    Agi: 44
+    Vit: 44
+    Int: 44
+    Dex: 44
+    Luk: 44
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Undead
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 890
+    AttackMotion: 960
+    ClientAttackMotion: 384
+    DamageMotion: 480
+    Ai: 01
