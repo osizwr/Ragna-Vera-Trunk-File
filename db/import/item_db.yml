@@ -554,15 +554,15 @@ Body:
     Buy: 100
     Weight: 100
   - Id: 30001
-    AegisName: RagnarokName_Credit
-    Name: RagnarokName Credit
+    AegisName: RagnaVera_Credit
+    Name: RagnaVera Credit
     Type: Etc
     Buy: 100000000
     Sell: 10000000
     Weight: 1
   - Id: 30002
-    AegisName: RagnarokName_Credit_Card
-    Name: RagnarokName Credit Card
+    AegisName: RagnaVera_Credit_Card
+    Name: RagnaVera Credit Card
     Type: Etc
     Buy: 100000000
     Sell: 100
@@ -755,3 +755,4651 @@ Body:
      NoGuildStorage: true
      NoMail: true
      NoAuction: true
+  - Id: 30017
+    AegisName: red_varmor
+    Name: Red Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bStr,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,5000;
+  - Id: 30018
+    AegisName: red_vshield
+    Name: Red Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bStr,1; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5;
+  - Id: 30019
+    AegisName: red_vmanteau
+    Name: Red Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bStr,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30020
+    AegisName: red_vshoes
+    Name: Red Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bStr,1; bonus bMaxHP,2; bonus bMaxSP,2; bonus bSpeedAddRate,20;
+  - Id: 30021
+    AegisName: white_varmor
+    Name: White Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAgi,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,5000;
+  - Id: 30022
+    AegisName: white_vshield
+    Name: White Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bAgi,1; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5;
+  - Id: 30023
+    AegisName: white_vmanteau
+    Name: White Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAgi,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30024
+    AegisName: white_vshoes
+    Name: White Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAgi,1; bonus bMaxHP,2; bonus bMaxSP,2; bonus bSpeedAddRate,20;
+  - Id: 30025
+    AegisName: green_varmor
+    Name: Green Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bVit,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,5000;
+  - Id: 30026
+    AegisName: green_vshield
+    Name: Green Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bVit,1; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5;
+  - Id: 30027
+    AegisName: green_vmanteau
+    Name: Green Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bVit,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30028
+    AegisName: green_vshoes
+    Name: Green Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bVit,1; bonus bMaxHP,2; bonus bMaxSP,2; bonus bSpeedAddRate,20;
+  - Id: 30029
+    AegisName: purple_varmor
+    Name: Purple Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bInt,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,5000;
+  - Id: 30030
+    AegisName: purple_vshield
+    Name: Purple Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bInt,1; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5;
+  - Id: 30031
+    AegisName: purple_vmanteau
+    Name: Purple Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bInt,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30032
+    AegisName: purple_vshoes
+    Name: Purple Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bInt,1; bonus bMaxHP,2; bonus bMaxSP,2; bonus bSpeedAddRate,20;
+  - Id: 30033
+    AegisName: brown_varmor
+    Name: Brown Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bDex,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,5000;
+  - Id: 30034
+    AegisName: brown_vshield
+    Name: Brown Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bDex,1; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5;
+  - Id: 30035
+    AegisName: brown_vmanteau
+    Name: Brown Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bDex,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30036
+    AegisName: brown_vshoes
+    Name: Brown Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bDex,1; bonus bMaxHP,2; bonus bMaxSP,2; bonus bSpeedAddRate,20;
+  - Id: 30037
+    AegisName: blue_varmor
+    Name: Blue Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bLuk,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,5000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,5000;
+  - Id: 30038
+    AegisName: blue_vshield
+    Name: Blue Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bLuk,1; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; bonus bMdef,5;
+  - Id: 30039
+    AegisName: blue_vmanteau
+    Name: Blue Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bLuk,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30040
+    AegisName: blue_vshoes
+    Name: Blue Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bLuk,1; bonus bMaxHP,2; bonus bMaxSP,2; bonus bSpeedAddRate,20;
+  - Id: 30041
+    AegisName: black_varmor
+    Name: Black Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,6500; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,6500;
+  - Id: 30042
+    AegisName: black_vshield
+    Name: Black Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bAllStats,1; bonus2 bSubEle,Ele_Water,25; bonus2 bSubEle,Ele_Fire,25; bonus2 bSubEle,Ele_Dark,25; bonus2 bSubEle,Ele_Undead,25; bonus bMdef,5;
+  - Id: 30043
+    AegisName: black_vmanteau
+    Name: Black Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,7+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,7+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30044
+    AegisName: black_vshoes
+    Name: Black Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAllStats,1; bonus bMaxHP,5; bonus bMaxSP,5; bonus bSpeedAddRate,35;
+  - Id: 30045
+    AegisName: red_f_varmor
+    Name: Red Fusion Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bStr,2; bonus bAllStats,1; bonus bUnbreakableArmor; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,8000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,8000;
+  - Id: 30046
+    AegisName: red_f_vshield
+    Name: Red Fusion Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bUnbreakableShield; bonus bStr,2; bonus bAllStats,1; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Undead,30; bonus bMdef,7;
+  - Id: 30047
+    AegisName: red_f_vmanteau
+    Name: Red Fusion Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment; bonus bStr,2; bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,8+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,8+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30048
+    AegisName: red_f_vshoes
+    Name: Red Fusion Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes; bonus bStr,2; bonus bAllStats,1; bonus bMaxHP,7; bonus bMaxSP,7; bonus bSpeedAddRate,50;
+  - Id: 30049
+    AegisName: white_f_varmor
+    Name: White Fusion Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAgi,2; bonus bAllStats,1; bonus bUnbreakableArmor; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,8000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,8000;
+  - Id: 30050
+    AegisName: white_f_vshield
+    Name: White Fusion Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bUnbreakableShield; bonus bAgi,2; bonus bAllStats,1; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Undead,30; bonus bMdef,7;
+  - Id: 30051
+    AegisName: white_f_vmanteau
+    Name: White Fusion Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment; bonus bAgi,2; bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,8+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,8+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30052
+    AegisName: white_f_vshoes
+    Name: White Fusion Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes; bonus bAgi,2; bonus bAllStats,1; bonus bMaxHP,7; bonus bMaxSP,7; bonus bSpeedAddRate,50;
+  - Id: 30053
+    AegisName: green_f_varmor
+    Name: Green Fusion Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bVit,2; bonus bAllStats,1; bonus bUnbreakableArmor; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,8000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,8000;
+  - Id: 30054
+    AegisName: green_f_vshield
+    Name: Green Fusion Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bUnbreakableShield; bonus bVit,2; bonus bAllStats,1; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Undead,30; bonus bMdef,7;
+  - Id: 30055
+    AegisName: green_f_vmanteau
+    Name: Green Fusion Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment; bonus bVit,2; bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,8+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,8+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30056
+    AegisName: green_f_vshoes
+    Name: Green Fusion Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes; bonus bVit,2; bonus bAllStats,1; bonus bMaxHP,7; bonus bMaxSP,7; bonus bSpeedAddRate,50;
+  - Id: 30057
+    AegisName: purple_f_varmor
+    Name: Purple Fusion Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bInt,2; bonus bAllStats,1; bonus bUnbreakableArmor; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,8000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,8000;
+  - Id: 30058
+    AegisName: purple_f_vshield
+    Name: Purple Fusion Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bUnbreakableShield; bonus bInt,2; bonus bAllStats,1; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Undead,30; bonus bMdef,7;
+  - Id: 30059
+    AegisName: purple_f_vmanteau
+    Name: Purple Fusion Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment; bonus bInt,2; bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,8+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,8+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30060
+    AegisName: purple_f_vshoes
+    Name: Purple Fusion Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes; bonus bInt,2; bonus bAllStats,1; bonus bMaxHP,7; bonus bMaxSP,7; bonus bSpeedAddRate,50;
+  - Id: 30061
+    AegisName: brown_f_varmor
+    Name: Brown Fusion Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bDex,2; bonus bAllStats,1; bonus bUnbreakableArmor; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,8000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,8000;
+  - Id: 30062
+    AegisName: brown_f_vshield
+    Name: Brown Fusion Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bUnbreakableShield; bonus bDex,2; bonus bAllStats,1; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Undead,30; bonus bMdef,7;
+  - Id: 30063
+    AegisName: brown_f_vmanteau
+    Name: Brown Fusion Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment; bonus bDex,2; bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,8+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,8+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30064
+    AegisName: brown_f_vshoes
+    Name: Brown Fusion Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes; bonus bDex,2; bonus bAllStats,1; bonus bMaxHP,7; bonus bMaxSP,7; bonus bSpeedAddRate,50;
+  - Id: 30065
+    AegisName: blue_f_varmor
+    Name: Blue Fusion Valkyrie Armor
+    Type: Armor
+    Weight: 2800
+    Defense: 6
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bLuk,2; bonus bAllStats,1; bonus bUnbreakableArmor; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus2 bResEff,Eff_Silence,8000; else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus2 bResEff,Eff_Stun,8000;
+  - Id: 30066
+    AegisName: blue_f_vshield
+    Name: Blue Fusion Valkyrie Shield
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 4
+    Script: |
+      bonus bUnbreakableShield; bonus bLuk,2; bonus bAllStats,1; bonus2 bSubEle,Ele_Water,30; bonus2 bSubEle,Ele_Fire,30; bonus2 bSubEle,Ele_Dark,30; bonus2 bSubEle,Ele_Undead,30; bonus bMdef,7;
+  - Id: 30067
+    AegisName: blue_f_vmanteau
+    Name: Blue Fusion Valkyrie Manteau
+    Type: Armor
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment; bonus bLuk,2; bonus bAllStats,1; if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte||Class==Job_Ninja||Class==Job_SoulLinker) bonus bFlee2,8+(getequiprefinerycnt(EQI_GARMENT)/2); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief||Class==Job_StarGladiator||Class==Job_Taekwon||Class==Job_Gunslinger) bonus bShortWeaponDamageReturn,8+(getequiprefinerycnt(EQI_GARMENT)/2);
+  - Id: 30068
+    AegisName: blue_f_vshoes
+    Name: Blue Fusion Valkyrie Shoes
+    Type: Armor
+    Weight: 500
+    Defense: 4
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes; bonus bLuk,2; bonus bAllStats,1; bonus bMaxHP,7; bonus bMaxSP,7; bonus bSpeedAddRate,50;
+  - Id: 31500
+    AegisName: Q_Weapon_3Slot_Svartr_Dagger
+    Name: Normal Svartr Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 550
+    Attack: 55
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31501
+    AegisName: Q_Weapon_3Slot_Svartr_Sword
+    Name: Normal Svartr Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 850
+    Attack: 85
+    Range: 1
+    Slots: 3
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31502
+    AegisName: Q_Weapon_3Slot_Svartr_Spear
+    Name: Normal Svartr Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 2500
+    Attack: 90
+    Range: 3
+    Slots: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31503
+    AegisName: Q_Weapon_3Slot_Svartr_Bow
+    Name: Normal Svartr Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1200
+    Attack: 120
+    Range: 5
+    Slots: 3
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31504
+    AegisName: Q_Weapon_3Slot_Svartr_Knuckles
+    Name: Normal Svartr Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 3
+    Jobs:
+      Monk: true
+      Priest: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31505
+    AegisName: Q_Weapon_3Slot_Svartr_Axe
+    Name: Normal Svartr Axe
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31506
+    AegisName: Q_Weapon_3Slot_Svartr_Katar
+    Name: Normal Svartr Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1300
+    Attack: 130
+    Range: 1
+    Slots: 3
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31507
+    AegisName: Q_Weapon_3Slot_Svartr_One-Handed_Staff
+    Name: Normal Svartr One-Handed Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 10
+    Weight: 600
+    Attack: 60
+    Range: 1
+    Slots: 3
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31508
+    AegisName: Q_Weapon_3Slot_Svartr_Book
+    Name: Normal Svartr Book
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 450
+    Attack: 45
+    Range: 1
+    Slots: 3
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31509
+    AegisName: Q_Weapon_3Slot_Svartr_Violin
+    Name: Normal Svartr Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 2
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31510
+    AegisName: Q_Weapon_3Slot_Svartr_Whip
+    Name: Normal Svartr Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 2
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31511
+    AegisName: Q_Weapon_3Slot_Svartr_Gun
+    Name: Normal Svartr Gun
+    Type: Weapon
+    SubType: Revolver
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 7
+    Slots: 3
+    Jobs:
+      Gunslinger: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 31512
+    AegisName: Q_Weapon_3Slot_Svartr_Huuma_Shuriken
+    Name: Normal Svartr Huuma Shuriken
+    Type: Weapon
+    SubType: Huuma
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 3
+    Jobs:
+      Ninja: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32000
+    AegisName: Q_Weapon_Base_Svartr_Dagger
+    Name: Normal Svartr Dagger
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 550
+    Attack: 55
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32001
+    AegisName: Q_Weapon_Base_Svartr_Sword
+    Name: Normal Svartr Sword
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 850
+    Attack: 85
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32002
+    AegisName: Q_Weapon_Base_Svartr_Spear
+    Name: Normal Svartr Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 2500
+    Attack: 90
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32003
+    AegisName: Q_Weapon_Base_Svartr_Bow
+    Name: Normal Svartr Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1200
+    Attack: 120
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32004
+    AegisName: Q_Weapon_Base_Svartr_Knuckles
+    Name: Normal Svartr Knuckles
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+      Priest: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32005
+    AegisName: Q_Weapon_Base_Svartr_Axe
+    Name: Normal Svartr Axe
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32006
+    AegisName: Q_Weapon_Base_Svartr_Katar
+    Name: Normal Svartr Katar
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1300
+    Attack: 130
+    Range: 1
+    Slots: 4
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32007
+    AegisName: Q_Weapon_Base_Svartr_One-Handed_Staff
+    Name: Normal Svartr One-Handed Staff
+    Type: Weapon
+    SubType: Staff
+    Buy: 10
+    Weight: 600
+    Attack: 60
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32008
+    AegisName: Q_Weapon_Base_Svartr_Book
+    Name: Normal Svartr Book
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 450
+    Attack: 45
+    Range: 1
+    Slots: 4
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32009
+    AegisName: Q_Weapon_Base_Svartr_Violin
+    Name: Normal Svartr Violin
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32010
+    AegisName: Q_Weapon_Base_Svartr_Whip
+    Name: Normal Svartr Whip
+    Type: Weapon
+    SubType: Whip
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32011
+    AegisName: Q_Weapon_Base_Svartr_Gun
+    Name: Normal Svartr Gun
+    Type: Weapon
+    SubType: Revolver
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 7
+    Slots: 4
+    Jobs:
+      Gunslinger: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32012
+    AegisName: Q_Weapon_Base_Svartr_Huuma_Shuriken
+    Name: Normal Svartr Huuma Shuriken
+    Type: Weapon
+    SubType: Huuma
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 4
+    Jobs:
+      Ninja: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+  - Id: 32013
+    AegisName: Q_Weapon_Effect_1_Svartr_Dagger
+    Name: Svartr Dagger of Valor
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 550
+    Attack: 55
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bDex,5; bonus bFlee2,3;
+      .@r = getrefine(); bonus bVit,.@r*1; bonus bStr,.@r*1; bonus bLuk,.@r*2;
+      if (.@r>=8) { bonus bDefRate,-10; bonus bDef2Rate,-10; }
+      if (.@r>=10) { bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3; }
+  - Id: 32014
+    AegisName: Q_Weapon_Effect_2_Svartr_Dagger
+    Name: Svartr Dagger of Mystic
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 550
+    Attack: 55
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bStr,3; bonus bDex,2; bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3;
+      .@r = getrefine();
+      if (.@r>=8) { bonus bHit,30; bonus2 bIgnoreDefClassRate,Class_All,2; }
+      if (.@r>=10) { bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3; }
+  - Id: 32015
+    AegisName: Q_Weapon_Effect_3_Svartr_Dagger
+    Name: Svartr Dagger of Instinct
+    Type: Weapon
+    SubType: Dagger
+    Buy: 20
+    Weight: 550
+    Attack: 55
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,25; bonus bMatk,25; bonus2 bSkillAtk,"ASC_BREAKER",3;
+      .@r = getrefine(); bonus bInt,.@r*1; bonus bStr,.@r*1;
+      if (.@r>=8) { bonus bInt,2; bonus2 bSkillAtk,"ASC_BREAKER",2; }
+      if (.@r>=10) { bonus bInt,3; bonus2 bSkillAtk,"ASC_BREAKER",3; }
+  - Id: 32016
+    AegisName: Q_Weapon_Effect_1_Svartr_Sword
+    Name: Svartr Sword of Valor
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 850
+    Attack: 85
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,-3; bonus bDex,3; bonus bFlee,-4; bonus bDef,7; bonus2 bSkillAtk,"KN_BOWLINGBASH",3;
+      .@r = getrefine(); if (readparam(bVit)>=160) bonus bBaseAtk,70;
+      if (.@r>=8) { bonus bStr,3; bonus2 bSkillAtk,"KN_BOWLINGBASH",3; }
+      if (.@r>=10) { bonus bInt,3; bonus2 bSkillAtk,"KN_BOWLINGBASH",4; }
+  - Id: 32017
+    AegisName: Q_Weapon_Effect_2_Svartr_Sword
+    Name: Svartr Sword of Mystic
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 850
+    Attack: 85
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bStr,4; bonus bVit,5; bonus bDef,7; bonus3 bAutoSpellWhenHit,"KN_BOWLINGBASH",7,20;
+      .@r = getrefine();
+      bonus bBaseAtk,.@r*5;
+      bonus bVit,(.@r/2)*1; bonus bStr,(.@r/2)*1; bonus2 bSkillAtk,"KN_BOWLINGBASH",(.@r/2)*1;
+  - Id: 32018
+    AegisName: Q_Weapon_Effect_3_Svartr_Sword
+    Name: Svartr Sword of Instinct
+    Type: Weapon
+    SubType: 1hSword
+    Buy: 20
+    Weight: 850
+    Attack: 85
+    Range: 1
+    Slots: 4
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Rogue: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,5; bonus bCriticalRate,7; bonus bDex,-5;
+      .@r = getrefine();
+      if (.@r>=8) { bonus bCriticalRate,5; bonus2 bAddRace,RC_DemiHuman,6; bonus2 bAddRace,RC_Player_Human,6; }
+      if (.@r>=10) { bonus bHit,-10; bonus bCriticalRate,5; bonus bCritAtkRate,5; }
+  - Id: 32019
+    AegisName: Q_Weapon_Effect_1_Svartr_Spear
+    Name: Svartr Spear of Valor
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 3000
+    Attack: 90
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,3; bonus bDex,5;
+      .@r = getrefine(); bonus2 bSkillAtk,"LK_SPIRALPIERCE",(.@r/2)*1;
+      if (.@r>=8) { bonus bLongAtkRate,2; }
+      if (.@r>=10) { bonus bLongAtkRate,3; }
+  - Id: 32020
+    AegisName: Q_Weapon_Effect_2_Svartr_Spear
+    Name: Svartr Spear of Mystic
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 3000
+    Attack: 90
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,-4; bonus bDex,3;
+      .@r = getrefine(); bonus2 bAddRace,RC_DemiHuman,(.@r/2)*1; bonus2 bAddRace,RC_Player_Human,(.@r/2)*1;
+      if (.@r>=8) { bonus2 bAddRace,RC_DemiHuman,2; bonus2 bAddRace,RC_Player_Human,2; }
+      if (.@r>=10) { bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3; }
+  - Id: 32021
+    AegisName: Q_Weapon_Effect_3_Svartr_Spear
+    Name: Svartr Spear of Instinct
+    Type: Weapon
+    SubType: 1hSpear
+    Buy: 20
+    Weight: 3000
+    Attack: 90
+    Range: 3
+    Slots: 4
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,2; bonus bVit,5; bonus bMaxHPrate,5;
+      .@r = getrefine(); bonus3 bAutoSpellWhenHit,"KN_PIERCE",10,50; bonus bVit,.@r*1;
+      if (.@r>=8) { bonus2 bSkillAtk,"PA_SACRIFICE",3; }
+      if (.@r>=10) { bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3; bonus2 bSkillAtk,"PA_SACRIFICE",2; }
+  - Id: 32022
+    AegisName: Q_Weapon_Effect_1_Svartr_Bow
+    Name: Svartr Bow of Valor
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1200
+    Attack: 120
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bHit,-10; bonus bLongAtkRate,2;
+      .@r = getrefine();
+      bonus bDex,(.@r/3)*2;
+      if (.@r>=8) { bonus bHit,-5; bonus bLongAtkRate,3; }
+      if (.@r>=10) { bonus bHit,-10; bonus bLongAtkRate,3; }
+  - Id: 32023
+    AegisName: Q_Weapon_Effect_2_Svartr_Bow
+    Name: Svartr Bow of Mystic
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1200
+    Attack: 120
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillAtk,"AC_DOUBLE",15;
+      .@r = getrefine();
+      bonus bDex,.@r*1; bonus bInt,.@r*1;
+      if (.@r>=8) { bonus2 bSkillAtk,"HT_BLITZBEAT",100; bonus2 bSkillAtk,"SN_FALCONASSAULT",100; }
+      if (.@r>=10) { bonus2 bSkillAtk,"HT_BLITZBEAT",100; bonus2 bSkillAtk,"SN_FALCONASSAULT",100; }
+  - Id: 32024
+    AegisName: Q_Weapon_Effect_3_Svartr_Bow
+    Name: Svartr Bow of Instinct
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 1200
+    Attack: 120
+    Range: 5
+    Slots: 4
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+      Rogue: true
+      Thief: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bCritAtkRate,5;
+      .@r = getrefine();
+      bonus bFlee,.@r*1; bonus bHit,.@r*2;
+      if (readparam(bLuk)>=250) bonus bCritAtkRate,5;
+      if (.@r>=8) { bonus bCriticalRate,5; }
+      if (.@r>=10) { bonus bCriticalRate,5; bonus bCritAtkRate,5; }
+  - Id: 32025
+    AegisName: Q_Weapon_Effect_1_Svartr_Katar
+    Name: Svartr Katar of Valor
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1300
+    Attack: 130
+    Range: 1
+    Slots: 4
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bDex,1; bonus bStr,3; bonus bAgi,4; bonus2 bSkillAtk,"AS_SONICBLOW",2;
+      .@r = getrefine();
+      if (.@r>=10) { bonus2 bSkillAtk,"AS_SONICBLOW",2; }
+  - Id: 32026
+    AegisName: Q_Weapon_Effect_2_Svartr_Katar
+    Name: Svartr Katar of Mystic
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1300
+    Attack: 130
+    Range: 1
+    Slots: 4
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bCriticalRate,5; bonus bAspdRate,7;
+      .@r = getrefine();
+      bonus3 bAutoSpell,"ASC_BREAKER",10,20;
+      if (.@r>=8) { bonus bCriticalRate,3; bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3; }
+      if (.@r>=10) { bonus bCriticalRate,5; }
+  - Id: 32027
+    AegisName: Q_Weapon_Effect_3_Svartr_Katar
+    Name: Svartr Katar of Instinct
+    Type: Weapon
+    SubType: Katar
+    Buy: 20
+    Weight: 1300
+    Attack: 130
+    Range: 1
+    Slots: 4
+    Jobs:
+      Assassin: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bStr,5; bonus bCritAtkRate,2; bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3;
+      .@r = getrefine();
+      bonus3 bAutoSpell,"AS_SONICBLOW",4,10;
+      if (.@r>=8) { bonus bCriticalRate,5; bonus bAspdRate,3; }
+      if (.@r>=10) { bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3; }
+  - Id: 32028
+    AegisName: Q_Weapon_Effect_1_Svartr_Knuckles
+    Name: Svartr Knuckles of Valor
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+      Priest: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bStr,5; bonus bDex,5;
+      .@r = getrefine();
+      bonus2 bSkillAtk,"MO_FINGEROFFENSIVE",(readparam(bDex)/100)*2;
+      if (.@r>=8) { bonus2 bSkillAtk,"MO_FINGEROFFENSIVE",3; }
+      if (.@r>=10) { bonus2 bSkillAtk,"MO_FINGEROFFENSIVE",5; }
+  - Id: 32029
+    AegisName: Q_Weapon_Effect_2_Svartr_Knuckles
+    Name: Svartr Knuckles of Mystic
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+      Priest: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bInt,5; bonus bDex,5; bonus2 bSkillAtk,"MO_TRIPLEATTACK",12;
+      .@r = getrefine();
+      if (.@r>=8) { bonus2 bSkillAtk,"MO_CHAINCOMBO",10; bonus2 bSkillAtk,"MO_COMBOFINISH",10; }
+      if (.@r>=10) { bonus2 bSkillAtk,"CH_CHAINCRUSH",10; bonus2 bSkillAtk,"CH_TIGERFIST",10; }
+  - Id: 32030
+    AegisName: Q_Weapon_Effect_3_Svartr_Knuckles
+    Name: Svartr Knuckles of Instinct
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Slots: 4
+    Jobs:
+      Monk: true
+      Priest: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bInt,5; bonus bMaxSP,150;
+      .@r = getrefine();
+      if (.@r>=9) { bonus2 bSkillAtk,"MO_EXTREMITYFIST",(readparam(bStr)/20)*1; }
+      if (.@r>=10) { bonus4 bautospellonskill,"CH_CHAINCRUSH","MO_EXTREMITYFIST",5,10000; }
+  - Id: 32031
+    AegisName: Q_Weapon_Effect_1_Svartr_Axe
+    Name: Svartr Axe of Valor
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillAtk,"MC_MAMMONITE",10; bonus2 bAddEff,Eff_Stun,200;
+      .@r = getrefine();
+      bonus bInt,.@r*1; bonus bStr,.@r*1;
+      if (.@r>=8) { bonus2 bSkillAtk,"CR_ACIDDEMONSTRATION",5; }
+      if (.@r>=10) { bonus2 bSkillAtk,"WS_CARTTERMINATION",5; }
+  - Id: 32032
+    AegisName: Q_Weapon_Effect_2_Svartr_Axe
+    Name: Svartr Axe of Mystic
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,-2;
+      .@r = getrefine();
+      if (readparam(bStr)>=250) bonus bBaseAtk,50;
+      bonus bAspdRate,-(.@r/10)*1;
+      bonus2 bAddRace,RC_DemiHuman,.@r*1; bonus2 bAddRace,RC_Player_Human,.@r*1;
+  - Id: 32033
+    AegisName: Q_Weapon_Effect_3_Svartr_Axe
+    Name: Svartr Axe of Instinct
+    Type: Weapon
+    SubType: Mace
+    Buy: 20
+    Weight: 800
+    Attack: 80
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Monk: true
+      Novice: true
+      Priest: true
+      SuperNovice: true
+      Swordman: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bAspdRate,4; bonus bStr,5; bonus bCritical,5;
+      .@r = getrefine();
+      bonus3 bAutoSpellWhenHit,"BS_HAMMERFALL",1,10;
+      if (.@r>=8) { bonus bCriticalRate,5; bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player_Human,3; }
+      if (.@r>=10) { bonus bStr,2; bonus2 bAddRace,RC_DemiHuman,5; bonus2 bAddRace,RC_Player_Human,5; }
+  - Id: 32034
+    AegisName: Q_Weapon_Effect_1_Svartr_One-Handed_Staff
+    Name: Svartr One-Handed Staff of Valor
+    Type: Weapon
+    SubType: Staff
+    Buy: 10
+    Weight: 600
+    Attack: 60
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMatk,50; bonus bInt,5; bonus bMatkRate,10; bonus bHealPower,50;
+      .@r = getrefine();
+      bonus bMatkRate,(.@r/2)*1; bonus bMaxHPrate,(.@r/2)*2;
+  - Id: 32035
+    AegisName: Q_Weapon_Effect_2_Svartr_One-Handed_Staff
+    Name: Svartr One-Handed Staff of Mystic
+    Type: Weapon
+    SubType: Staff
+    Buy: 10
+    Weight: 600
+    Attack: 60
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMatk,50; bonus bMatkRate,10; bonus bDelayrate,-6;
+      .@r = getrefine();
+      bonus bMatkRate,(.@r/2)*1; bonus bDelayrate,-(.@r/4)*1;
+      if (.@r>=8) { bonus2 bSkillAtk,"WZ_WATERBALL",10; bonus2 bSkillAtk,"WZ_JUPITEL",10; bonus2 bSkillAtk,"WZ_EARTHSPIKE",10; bonus2 bSkillAtk,"HW_MAGICCRASHER",10; bonus2 bSkillAtk,"HW_NAPALMVULCAN",10; }
+  - Id: 32036
+    AegisName: Q_Weapon_Effect_3_Svartr_One-Handed_Staff
+    Name: Svartr One-Handed Staff of Instinct
+    Type: Weapon
+    SubType: Staff
+    Buy: 10
+    Weight: 600
+    Attack: 60
+    Range: 1
+    Slots: 4
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMatk,50; bonus bMatkRate,7; bonus bInt,6;
+      .@r = getrefine();
+      bonus2 bIgnoreDefClassRate,Class_All,(.@r/3)*1; bonus bMaxHP,(.@r/3)*75; bonus bMatk,(.@r/3)*7;
+      if (.@r>=8) { bonus bMatkRate,8; }
+  - Id: 32037
+    AegisName: Q_Weapon_Effect_1_Svartr_Book
+    Name: Svartr Book of Valor
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 450
+    Range: 1
+    Slots: 4
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bHit,-10; bonus bAtkRate,6;
+      .@r = getrefine();
+      if (.@r>=8) { bonus bAtkRate,3; bonus bHit,-5; bonus2 bAddEle,Ele_Holy,5; }
+      if (.@r>=10) { bonus bAtkRate,6; bonus2 bAddSize,Size_Small,6; bonus2 bAddSize,Size_Medium,6; bonus bHit,-10; }
+  - Id: 32038
+    AegisName: Q_Weapon_Effect_2_Svartr_Book
+    Name: Svartr Book of Mystic
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 450
+    Range: 1
+    Slots: 4
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMatk,50; bonus bMatkRate,7; bonus2 bSkillAtk,"AL_HOLYLIGHT",10;
+      .@r = getrefine();
+      bonus2 bSkillAtk,"AL_HOLYLIGHT",.@r*2; bonus2 bSkillAtk,"PR_MAGNUS",.@r*2; bonus2 bSkillAtk,"PR_TURNUNDEAD",.@r*2;
+      if (.@r>=8) { bonus bMatkRate,5; bonus bDelayrate,-5; }
+      if (.@r>=10) { bonus2 bSkillAtk,"AL_HOLYLIGHT",20; }
+  - Id: 32039
+    AegisName: Q_Weapon_Effect_3_Svartr_Book
+    Name: Svartr Book of Instinct
+    Type: Weapon
+    SubType: Book
+    Buy: 20
+    Weight: 450
+    Range: 1
+    Slots: 4
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillAtk,"MG_COLDBOLT",5; bonus2 bSkillAtk,"MG_FIREBOLT",5; bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",5;
+      .@r = getrefine();
+      bonus bMatkRate,.@r*1;
+      if (.@r>=8) { bonus2 bDelayrate,"MG_COLDBOLT",-5; bonus2 bDelayrate,"MG_FIREBOLT",-5; bonus2 bDelayrate,"MG_LIGHTNINGBOLT",-5; }
+      if (.@r>=10) { bonus bMatkRate,5; }
+  - Id: 32040
+    AegisName: Q_Weapon_Effect_1_Svartr_Violin
+    Name: Svartr Violin of Valor
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 800
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillAtk,"CG_ARROWVULCAN",5; bonus2 bSkillHeal,"BA_APPLEIDUN",3;
+      .@r = getrefine();
+      if (.@r>=8) { bonus2 bSkillHeal,"BA_APPLEIDUN",5; }
+      if (.@r>=10) { bonus bAtkRate,3; bonus2 bSkillCooldown,"CG_ARROWVULCAN",500; }
+  - Id: 32041
+    AegisName: Q_Weapon_Effect_2_Svartr_Violin
+    Name: Svartr Violin of Mystic
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 800
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillCooldown,"CG_ARROWVULCAN",1000;
+      .@r = getrefine();
+      bonus bDex,.@r*1; bonus bInt,.@r*1;
+      bonus bMaxHPrate,(.@r/2)*1;
+      if (.@r>=8) { bonus bLongAtkRate,6; bonus2 bSkillCooldown,"CG_ARROWVULCAN",500; }
+      if (.@r>=10) { bonus bLongAtkRate,6; }
+  - Id: 32042
+    AegisName: Q_Weapon_Effect_3_Svartr_Violin
+    Name: Svartr Violin of Instinct
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 800
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillCooldown,"CG_ARROWVULCAN",1000; bonus2 bSkillHeal,"BA_APPLEIDUN",15;
+      .@r = getrefine();
+      if (.@r>=8) { bonus2 bSkillHeal,"BA_APPLEIDUN",10; }
+  - Id: 32043
+    AegisName: Q_Weapon_Effect_1_Svartr_Whip
+    Name: Svartr Whip of Valor
+    Type: Weapon
+    SubType: Whip
+    Buy: 20
+    Weight: 800
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillAtk,"CG_ARROWVULCAN",5; bonus2 bSkillHeal,"BA_APPLEIDUN",3;
+      .@r = getrefine();
+      if (.@r>=8) { bonus2 bSkillHeal,"BA_APPLEIDUN",5; }
+      if (.@r>=10) { bonus bAtkRate,3; bonus2 bSkillCooldown,"CG_ARROWVULCAN",500; }
+  - Id: 32044
+    AegisName: Q_Weapon_Effect_2_Svartr_Whip
+    Name: Svartr Whip of Mystic
+    Type: Weapon
+    SubType: Whip
+    Buy: 20
+    Weight: 800
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillCooldown,"CG_ARROWVULCAN",1000;
+      .@r = getrefine();
+      bonus bDex,.@r*1; bonus bInt,.@r*1;
+      bonus bMaxHPrate,(.@r/2)*1;
+      if (.@r>=8) { bonus bLongAtkRate,6; bonus2 bSkillCooldown,"CG_ARROWVULCAN",500; }
+      if (.@r>=10) { bonus bLongAtkRate,6; }
+  - Id: 32045
+    AegisName: Q_Weapon_Effect_3_Svartr_Whip
+    Name: Svartr Whip of Instinct
+    Type: Weapon
+    SubType: Whip
+    Buy: 20
+    Weight: 800
+    Range: 2
+    Slots: 4
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus2 bSkillCooldown,"CG_ARROWVULCAN",1000; bonus2 bSkillHeal,"BA_APPLEIDUN",15;
+      .@r = getrefine();
+      if (.@r>=8) { bonus2 bSkillHeal,"BA_APPLEIDUN",10; }
+  - Id: 32046
+    AegisName: Q_Weapon_Effect_1_Svartr_Revolver
+    Name: Svartr Revolver of Valor
+    Type: Weapon
+    SubType: Revolver
+    Buy: 20
+    Weight: 1000
+    Range: 7
+    Slots: 4
+    Jobs:
+      Gunslinger: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bDex,5; bonus bStr,3; bonus bLongAtkRate,6;
+      .@r = getrefine();
+      bonus bDex,.@r*1; bonus bHit,.@r*2; bonus2 bAddRace,RC_DemiHuman,.@r*1; bonus2 bAddRace,RC_Player_Human,.@r*1;
+      if (.@r>=8) { bonus2 bCastrate,"GS_TRACKING",-100; }
+      if (.@r>=10) { bonus bHit,-15; bonus bLongAtkRate,3; bonus2 bSkillAtk,"GS_TRACKING",7; }
+  - Id: 32047
+    AegisName: Q_Weapon_Effect_2_Svartr_Shotgun
+    Name: Svartr Shotgun of Mystic
+    Type: Weapon
+    SubType: Shotgun
+    Buy: 20
+    Weight: 1000
+    Range: 7
+    Slots: 4
+    Jobs:
+      Gunslinger: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bDex,5; bonus bStr,3; bonus bLongAtkRate,6;
+      .@r = getrefine();
+      bonus bDex,.@r*1; bonus bHit,.@r*2; bonus2 bAddRace,RC_DemiHuman,(.@r/2)*1; bonus2 bAddRace,RC_Player_Human,(.@r/2)*1;
+      if (.@r>=8) { bonus2 bSkillAtk,"GS_SPREADATTACK",7; bonus2 bSkillAtk,"GS_DUST",7; bonus2 bSkillAtk,"GS_FULLBUSTER",7; }
+      if (.@r>=10) { bonus bLongAtkRate,3; }
+  - Id: 32048
+    AegisName: Q_Weapon_Effect_3_Svartr_Rifle
+    Name: Svartr Rifle of Instinct
+    Type: Weapon
+    SubType: Rifle
+    Buy: 20
+    Weight: 1000
+    Range: 7
+    Slots: 4
+    Jobs:
+      Gunslinger: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bDex,5; bonus bStr,3; bonus bLongAtkRate,6;
+      .@r = getrefine();
+      bonus bDex,.@r*1; bonus bHit,.@r*2; bonus2 bAddRace,RC_DemiHuman,.@r*1; bonus2 bAddRace,RC_Player_Human,.@r*1;
+      if (.@r>=8) { bonus bLongAtkRate,5; }
+      if (.@r>=10) { bonus2 bSkillAtk,"GS_DESPERADO",10; bonus2 bSkillAtk,"GS_RAPIDSHOWER",10; bonus2 bSkillAtk,"GS_TRIPLEACTION",20; bonus2 bSkillAtk,"GS_PIERCINGSHOT",25; }
+  - Id: 32049
+    AegisName: Q_Weapon_Effect_1_Svartr_Huuma_Shuriken
+    Name: Svartr Huuma Shuriken of Valor
+    Type: Weapon
+    SubType: Huuma
+    Buy: 20
+    Weight: 1000
+    Range: 1
+    Slots: 4
+    Jobs:
+      Ninja: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMatk,50; bonus bInt,2; bonus bDex,2; bonus bVit,2; bonus bMatkRate,6;
+      .@r = getrefine();
+      bonus bInt,.@r*1; bonus bMaxHPrate,.@r*1;
+      if (.@r>=8) { bonus bMaxSPrate,5; bonus bMatkRate,3; }
+      if (.@r>=10) { bonus2 bSkillAtk,"NJ_KOUENKA",6; bonus2 bSkillAtk,"NJ_RAIGEKISAI",6; bonus2 bSkillAtk,"NJ_HYOUSENSOU",6; }
+  - Id: 32050
+    AegisName: Q_Weapon_Effect_2_Svartr_Huuma_Shuriken
+    Name: Svartr Huuma Shuriken of Mystic
+    Type: Weapon
+    SubType: Huuma
+    Buy: 20
+    Weight: 1000
+    Range: 1
+    Slots: 4
+    Jobs:
+      Ninja: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50; bonus bStr,2; bonus bDex,2; bonus bAgi,2; bonus2 bAddRace,RC_DemiHuman,4; bonus2 bAddRace,RC_Player_Human,4; bonus2 bSkillAtk,"NJ_SYURIKEN",3; bonus2 bSkillAtk,"NJ_KUNAI",3; bonus2 bSkillAtk,"NJ_HUUMA",3; bonus2 bSkillAtk,"NJ_ZENYNAGE",3;
+      .@r = getrefine();
+      bonus bInt,.@r*2; bonus bLongAtkRate,(.@r/2)*1;
+      if (.@r>=8) { bonus2 bSkillAtk,"NJ_SYURIKEN",5; bonus2 bSkillAtk,"NJ_KUNAI",5; bonus2 bSkillAtk,"NJ_HUUMA",5; bonus2 bSkillAtk,"NJ_ZENYNAGE",5; }
+      if (.@r>=10) { bonus bLongAtkRate,5; bonus2 bSkillAtk,"NJ_SYURIKEN",3; bonus2 bSkillAtk,"NJ_KUNAI",3; bonus2 bSkillAtk,"NJ_HUUMA",3; bonus2 bSkillAtk,"NJ_ZENYNAGE",3; }
+  - Id: 32051
+    AegisName: Q_Weapon_Effect_3_Svartr_Huuma_Shuriken
+    Name: Svartr Huuma Shuriken of Instinct
+    Type: Weapon
+    SubType: Huuma
+    Buy: 20
+    Weight: 1000
+    Range: 1
+    Slots: 4
+    Jobs:
+      Ninja: true
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bBaseAtk,50;
+      .@r = getrefine();
+      bonus bStr,.@r*2; bonus bVit,.@r*3;
+      bonus bLongAtkRate,(.@r/2)*1;
+      if (readparam(bDex)>=140) bonus bMaxHPrate,6; bonus2 bSkillAtk,"NJ_ISSEN",5;
+      if (.@r>=10) { skill "TF_HIDING",1; }
+    UnEquipScript: |
+      sc_end SC_HIDING;
+  - Id: 35000
+    AegisName: DRAGONHELM_PRP
+    Name: "Onslaught Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3500
+    Script: |
+      bonus bStr,10;
+      bonus2 bSubEle,Ele_Fire,10;
+      bonus2 bAddEle,Ele_Water,10;
+      bonus2 bMagicAddEle,Ele_Water,10;
+  - Id: 35001
+    AegisName: DRAGONHELM_YLW
+    Name: "Onslaught Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3501
+    Script: |
+      bonus bStr,12;
+      bonus2 bSubEle,Ele_Fire,15;
+      bonus2 bAddEle,Ele_Water,15;
+      bonus2 bMagicAddEle,Ele_Water,15;
+  - Id: 35002
+    AegisName: DRAGONHELM_ONE
+    Name: "Onslaught Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3502
+    Script: |
+      bonus bStr,15;
+      bonus2 bSubEle,Ele_Fire,20;
+      bonus2 bAddEle,Ele_Water,20;
+      bonus2 bMagicAddEle,Ele_Water,20;
+  - Id: 35003
+    AegisName: DRAGONHELM_RED
+    Name: "Onslaught Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 0
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3503
+    Script: |
+      bonus bStr,20;
+      bonus2 bSubEle,Ele_Fire,30;
+      bonus2 bAddEle,Ele_Water,20;
+      bonus2 bMagicAddEle,Ele_Water,20;
+  - Id: 35004
+    AegisName: PRIDE_PNK
+    Name: "Fermete Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3504
+    Script: |
+      bonus bAgi,10;
+      bonus2 bSubEle,Ele_Holy,10;
+      bonus2 bAddEle,Ele_Dark,10;
+      bonus2 bMagicAddEle,Ele_Dark,10;
+  - Id: 35005
+    AegisName: PRIDE_PRP
+    Name: "Fermete Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3505
+    Script: |
+      bonus bAgi,12;
+      bonus2 bSubEle,Ele_Holy,15;
+      bonus2 bAddEle,Ele_Dark,15;
+      bonus2 bMagicAddEle,Ele_Dark,15;
+  - Id: 35006
+    AegisName: PRIDE_GRY
+    Name: "Fermete Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3506
+    Script: |
+      bonus bAgi,15;
+      bonus2 bSubEle,Ele_Holy,20;
+      bonus2 bAddEle,Ele_Dark,20;
+      bonus2 bMagicAddEle,Ele_Dark,20;
+  - Id: 35007
+    AegisName: PRIDE_WHT
+    Name: "Fermete Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 0
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3507
+    Script: |
+      bonus bAgi,20;
+      bonus2 bSubEle,Ele_Holy,30;
+      bonus2 bAddEle,Ele_Dark,20;
+      bonus2 bMagicAddEle,Ele_Dark,20;
+  - Id: 35008
+    AegisName: MIGHT_WHT
+    Name: "Hardr Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3508
+    Script: |
+      bonus bVit,10;
+      bonus2 bSubEle,Ele_Wind,10;
+      bonus2 bAddEle,Ele_Earth,10;
+      bonus2 bMagicAddEle,Ele_Earth,10;
+  - Id: 35009
+    AegisName: MIGHT_YLW
+    Name: "Hardr Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3509
+    Script: |
+      bonus bVit,12;
+      bonus2 bSubEle,Ele_Wind,15;
+      bonus2 bAddEle,Ele_Earth,15;
+      bonus2 bMagicAddEle,Ele_Earth,15;
+  - Id: 35010
+    AegisName: MIGHT_ORG
+    Name: "Hardr Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3510
+    Script: |
+      bonus bVit,15;
+      bonus2 bSubEle,Ele_Wind,20;
+      bonus2 bAddEle,Ele_Earth,20;
+      bonus2 bMagicAddEle,Ele_Earth,20;
+  - Id: 35011
+    AegisName: MIGHT_GRN
+    Name: "Hardr Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 0
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3511
+    Script: |
+      bonus bVit,20;
+      bonus2 bSubEle,Ele_Wind,30;
+      bonus2 bAddEle,Ele_Earth,20;
+      bonus2 bMagicAddEle,Ele_Earth,20;
+  - Id: 35012
+    AegisName: DRAGONSILKHELM_WHT
+    Name: "Arcane Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3512
+    Script: |
+      bonus bInt,10;
+      bonus2 bSubEle,Ele_Poison,10;
+      bonus2 bAddEle,Ele_Earth,10;
+      bonus2 bMagicAddEle,Ele_Earth,10;
+  - Id: 35013
+    AegisName: DRAGONSILKHELM_GRY
+    Name: "Arcane Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3513
+    Script: |
+      bonus bInt,12;
+      bonus2 bSubEle,Ele_Poison,15;
+      bonus2 bAddEle,Ele_Earth,15;
+      bonus2 bMagicAddEle,Ele_Earth,15;
+  - Id: 35014
+    AegisName: DRAGONSILKHELM_BLU
+    Name: "Arcane Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3514
+    Script: |
+      bonus bInt,15;
+      bonus2 bSubEle,Ele_Poison,20;
+      bonus2 bAddEle,Ele_Earth,20;
+      bonus2 bMagicAddEle,Ele_Earth,20;
+  - Id: 35015
+    AegisName: DRAGONSILKHELM_PRP
+    Name: "Arcane Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 0
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3515
+    Script: |
+      bonus bInt,20;
+      bonus2 bSubEle,Ele_Poison,30;
+      bonus2 bAddEle,Ele_Earth,20;
+      bonus2 bMagicAddEle,Ele_Earth,20;
+  - Id: 35016
+    AegisName: FURY
+    Name: "Huntsman Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3516
+    Script: |
+      bonus bDex,10;
+      bonus2 bSubEle,Ele_Earth,10;
+      bonus2 bAddEle,Ele_Wind,10;
+      bonus2 bMagicAddEle,Ele_Wind,10;
+  - Id: 35017
+    AegisName: FURY_WHT
+    Name: "Huntsman Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3517
+    Script: |
+      bonus bDex,12;
+      bonus2 bSubEle,Ele_Earth,15;
+      bonus2 bAddEle,Ele_Wind,15;
+      bonus2 bMagicAddEle,Ele_Wind,15;
+  - Id: 35018
+    AegisName: FURY_YLW
+    Name: "Huntsman Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3518
+    Script: |
+      bonus bDex,15;
+      bonus2 bSubEle,Ele_Earth,20;
+      bonus2 bAddEle,Ele_Wind,20;
+      bonus2 bMagicAddEle,Ele_Wind,20;
+  - Id: 35019
+    AegisName: FURY_ORG
+    Name: "Huntsman Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 0
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3519
+    Script: |
+      bonus bDex,20;
+      bonus2 bSubEle,Ele_Earth,30;
+      bonus2 bAddEle,Ele_Wind,20;
+      bonus2 bMagicAddEle,Ele_Wind,20;
+  - Id: 35020
+    AegisName: GRACE_BLK
+    Name: "Mortelle: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3520
+    Script: |
+      bonus bLuk,10;
+      bonus2 bSubEle,Ele_Water,10;
+      bonus2 bAddEle,Ele_Fire,10;
+      bonus2 bMagicAddEle,Ele_Fire,10;
+  - Id: 35021
+    AegisName: GRACE_GRY
+    Name: "Mortelle: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3521
+    Script: |
+      bonus bLuk,12;
+      bonus2 bSubEle,Ele_Water,15;
+      bonus2 bAddEle,Ele_Fire,15;
+      bonus2 bMagicAddEle,Ele_Fire,15;
+  - Id: 35022
+    AegisName: GRACE_WHT
+    Name: "Mortelle: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3522
+    Script: |
+      bonus bLuk,15;
+      bonus2 bSubEle,Ele_Water,20;
+      bonus2 bAddEle,Ele_Fire,20;
+      bonus2 bMagicAddEle,Ele_Fire,20;
+  - Id: 35023
+    AegisName: GRACE_BLU
+    Name: "Mortelle: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3523
+    Script: |
+      bonus bLuk,20;
+      bonus2 bSubEle,Ele_Water,30;
+      bonus2 bAddEle,Ele_Fire,20;
+      bonus2 bMagicAddEle,Ele_Fire,20;
+  - Id: 35024
+    AegisName: Hat_Valkyrie_Red: I
+    Name: "Blaze Valkyrie Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3525
+    Script: |
+      bonus bStr,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35025
+    AegisName: Hat_Valkyrie_Red: II
+    Name: "Blaze Valkyrie Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3525
+    Script: |
+      bonus bStr,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35026
+    AegisName: New_Red_Valkyrie_Helm: III
+    Name: "Blaze Valkyrie Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3527
+    Script: |
+      bonus bStr,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35027
+    AegisName: New_Red_Valkyrie_Helm: IV
+    Name: "Blaze Valkyrie Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3527
+    Script: |
+      bonus bStr,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35028
+    AegisName: Hat_Valkyrie_Green: I
+    Name: "Firnen Valkyrie Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3529
+    Script: |
+      bonus bVit,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35029
+    AegisName: Hat_Valkyrie_Green: II
+    Name: "Firnen Valkyrie Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3529
+    Script: |
+      bonus bVit,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35030
+    AegisName: New_Green_Valkyrie_Helm: III
+    Name: "Firnen Valkyrie Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3531
+    Script: |
+      bonus bVit,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35031
+    AegisName: New_Green_Valkyrie_Helm: IV
+    Name: "Firnen Valkyrie Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3531
+    Script: |
+      bonus bVit,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35032
+    AegisName: Hat_Valkyrie_Purple: I
+    Name: "Cynder Valkyrie Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3533
+    Script: |
+      bonus bInt,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35033
+    AegisName: Hat_Valkyrie_Purple: II
+    Name: "Cynder Valkyrie Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3533
+    Script: |
+      bonus bInt,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35034
+    AegisName: New_Purple_Valkyrie_Helm: III
+    Name: "Cynder Valkyrie Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3535
+    Script: |
+      bonus bInt,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35035
+    AegisName: New_Purple_Valkyrie_Helm: IV
+    Name: "Cynder Valkyrie Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3535
+    Script: |
+      bonus bInt,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35036
+    AegisName: Hat_Valkyrie_Black: I
+    Name: "Fatalis Valkyrie Helm: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3537
+    Script: |
+      bonus bDex,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35037
+    AegisName: Hat_Valkyrie_Black: II
+    Name: "Fatalis Valkyrie Helm: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3537
+    Script: |
+      bonus bDex,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35038
+    AegisName: New_Black_Valkyrie_Helm: III
+    Name: "Fatalis Valkyrie Helm: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3539
+    Script: |
+      bonus bDex,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35039
+    AegisName: New_Black_Valkyrie_Helm: IV
+    Name: "Fatalis Valkyrie Helm: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3539
+    Script: |
+      bonus bDex,7;
+      bonus bAgi,3; bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player_Human,10;
+  - Id: 35040
+    AegisName: Wings_Dragon_Red
+    Name: Blaze Dragon Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3540
+    Script: |
+      bonus bAllStats,7;
+      bonus2 bAddRace,RC_DemiHuman,15; bonus2 bAddRace,RC_Player_Human,15;
+  - Id: 35041
+    AegisName: Wings_Dragon_Green
+    Name: Firnen Dragon Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3541
+    Script: |
+      bonus bAllStats,7;
+      bonus2 bAddRace,RC_DemiHuman,15; bonus2 bAddRace,RC_Player_Human,15;
+  - Id: 35042
+    AegisName: Wings_Dragon_Violet
+    Name: Cynder Dragon Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3542
+    Script: |
+      bonus bAllStats,7;
+      bonus2 bMagicAddRace,RC_DemiHuman,15; bonus2 bMagicAddRace,RC_Player_Human,15;
+  - Id: 35043
+    AegisName: Wings_Dragon_Black
+    Name: Fatalis Dragon Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3543
+    Script: |
+      bonus bAllStats,7;
+      bonus bAtkRate,15;
+  - Id: 35044
+    AegisName: Wings_Angel
+    Name: Angel Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3544
+    Script: |
+      bonus bStr,3; bonus bInt,3;
+      bonus2 bAddEff,Eff_Blind,500;
+  - Id: 35045
+    AegisName: Wings_Devil
+    Name: Devil Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3545
+    Script: |
+      bonus bAgi,3; bonus bDex,3;
+      bonus2 bResEff,Eff_Stun,1000;
+  - Id: 35046
+    AegisName: Wings_White_Butterfly
+    Name: "White Butterfly Wings: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3546
+    Script: |
+      bonus bAgi,10; bonus bFlee,30;
+      bonus bSpeedAddRate,10;
+  - Id: 35047
+    AegisName: Wings_Black_Butterfly
+    Name: "Black Butterfly Wings: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3547
+    Script: |
+      bonus bAgi,10; bonus bFlee,30;
+      bonus bSpeedAddRate,10;
+  - Id: 35048
+    AegisName: New_White_Fairy_Wings
+    Name: "White Butterfly Wings: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3548
+    Script: |
+      bonus bAgi,15; bonus bFlee,50;
+      bonus bSpeedAddRate,10;
+  - Id: 35049
+    AegisName: New_Black_Fairy_Wings
+    Name: "Black Butterfly Wings: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3549
+    Script: |
+      bonus bAgi,15; bonus bFlee,50;
+      bonus bSpeedAddRate,10;
+  - Id: 35050
+    AegisName: Wings_Icarus
+    Name: "Icarus Wings: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3550
+    Script: |
+      bonus bAgi,15;
+      bonus2 bSubEle,Ele_Dark,15;
+      bonus2 bSubEle,Ele_Earth,15;
+      bonus2 bSubEle,Ele_Fire,15;
+      bonus2 bSubEle,Ele_Ghost,15;
+      bonus2 bSubEle,Ele_Holy,15;
+      bonus2 bSubEle,Ele_Poison,15;
+      bonus2 bSubEle,Ele_Undead,15;
+      bonus2 bSubEle,Ele_Water,15;
+      bonus2 bSubEle,Ele_Wind,15;
+  - Id: 35051
+    AegisName: Wings_T_Icarus
+    Name: "Icarus Wings: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3551
+    Script: |
+      bonus bAgi,15; bonus bFlee,15; bonus bFlee2,5;
+      bonus2 bSubEle,Ele_Dark,15;
+      bonus2 bSubEle,Ele_Earth,15;
+      bonus2 bSubEle,Ele_Fire,15;
+      bonus2 bSubEle,Ele_Ghost,15;
+      bonus2 bSubEle,Ele_Holy,15;
+      bonus2 bSubEle,Ele_Poison,15;
+      bonus2 bSubEle,Ele_Undead,15;
+      bonus2 bSubEle,Ele_Water,15;
+      bonus2 bSubEle,Ele_Wind,15;
+  - Id: 35052
+    AegisName: Wings_Torn
+    Name: "Torn Wings: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3552
+    Script: |
+      bonus bLuk,10; bonus bCriticalRate,5; bonus bFlee2,5;
+      bonus2 bSubEle,Ele_Wind,10; bonus2 bAddEff,Eff_Silence,500;
+  - Id: 35053
+    AegisName: Wings_T_Torn
+    Name: "Torn Wings: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3553
+    Script: |
+      bonus bLuk,15; bonus bCriticalRate,10; bonus bFlee2,7;
+      bonus2 bSubEle,Ele_Wind,10; bonus2 bAddEff,Eff_Silence,500;
+  - Id: 35054
+    AegisName: Wings_Demon
+    Name: Demon Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3554
+    Script: |
+      bonus bStr,10;
+      bonus2 bSubEle,Ele_Dark,10; bonus2 bAddEff,Eff_Bleeding,500;
+  - Id: 35055
+    AegisName: Wings_Phoenix
+    Name: Phoenix Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3555
+    Script: |
+      bonus bVit,10; bonus bMaxHPrate,10; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+      bonus2 bSubEle,Ele_Fire,10; bonus2 bAddEff,Eff_Blind,500;
+  - Id: 35056
+    AegisName: Wings_Arctic
+    Name: Arctic Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3556
+    Script: |
+      bonus bInt,10;
+      bonus2 bSubEle,Ele_Water,10; bonus2 bAddEff,Eff_Freeze,500;
+  - Id: 35057
+    AegisName: Wings_Gargoyle
+    Name: Gargoyle Wings
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3557
+    Script: |
+      bonus bDex,10;
+      bonus2 bSubEle,Ele_Undead,10; bonus2 bAddEff,Eff_Stone,500;
+  - Id: 35058
+    AegisName: "Aura_Lighthalzen_Red: I"
+    Name: "Onslaught Aura: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3558
+    Script: |
+      bonus bStr,3;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35059
+    AegisName: "Aura_Lighthalzen_Red: II"
+    Name: "Onslaught Aura: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3558
+    Script: |
+      bonus bStr,5;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35060
+    AegisName: "Aura_Lighthalzen_Red: III"
+    Name: "Onslaught Aura: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3558
+    Script: |
+      bonus bStr,5;
+      bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+  - Id: 35061
+    AegisName: "Aura_Lighthalzen_Red: IV"
+    Name: "Onslaught Aura: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3558
+    Script: |
+      bonus bStr,7;
+      bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player_Human,4;
+  - Id: 35062
+    AegisName: "Aura_Lighthalzen_White: I"
+    Name: "Fermete Aura: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3559
+    Script: |
+      bonus bAgi,3;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35063
+    AegisName: "Aura_Lighthalzen_White: II"
+    Name: "Fermete Aura: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3559
+    Script: |
+      bonus bAgi,5;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35064
+    AegisName: "Aura_Lighthalzen_White: III"
+    Name: "Fermete Aura: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3559
+    Script: |
+      bonus bAgi,5;
+      bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+  - Id: 35065
+    AegisName: "Aura_Lighthalzen_White: IV"
+    Name: "Fermete Aura: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3559
+    Script: |
+      bonus bAgi,7;
+      bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player_Human,4;
+  - Id: 35066
+    AegisName: "Aura_Lighthalzen_Green: I"
+    Name: "Hardr Aura: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3560
+    Script: |
+      bonus bVit,3;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35067
+    AegisName: "Aura_Lighthalzen_Green: II"
+    Name: "Hardr Aura: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3560
+    Script: |
+      bonus bVit,5;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35068
+    AegisName: "Aura_Lighthalzen_Green: III"
+    Name: "Hardr Aura: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3560
+    Script: |
+      bonus bVit,5;
+      bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+  - Id: 35069
+    AegisName: "Aura_Lighthalzen_Green: IV"
+    Name: "Hardr Aura: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3560
+    Script: |
+      bonus bVit,7;
+      bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player_Human,4;
+  - Id: 35070
+    AegisName: "Aura_Lighthalzen_Purple: I"
+    Name: "Arcane Aura: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3561
+    Script: |
+      bonus bInt,3;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35071
+    AegisName: "Aura_Lighthalzen_Purple: II"
+    Name: "Arcane Aura: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3561
+    Script: |
+      bonus bInt,5;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35072
+    AegisName: "Aura_Lighthalzen_Purple: III"
+    Name: "Arcane Aura: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3561
+    Script: |
+      bonus bInt,5;
+      bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+  - Id: 35073
+    AegisName: "Aura_Lighthalzen_Purple: IV"
+    Name: "Arcane Aura: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3561
+    Script: |
+      bonus bInt,7;
+      bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player_Human,4;
+  - Id: 35074
+    AegisName: "Aura_Lighthalzen_Gold: I"
+    Name: "Huntsman Aura: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3562
+    Script: |
+      bonus bDex,3;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35075
+    AegisName: "Aura_Lighthalzen_Gold: II"
+    Name: "Huntsman Aura: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3562
+    Script: |
+      bonus bDex,5;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35076
+    AegisName: "Aura_Lighthalzen_Gold: III"
+    Name: "Huntsman Aura: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3562
+    Script: |
+      bonus bDex,5;
+      bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+  - Id: 35077
+    AegisName: "Aura_Lighthalzen_Gold: IV"
+    Name: "Huntsman Aura: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3562
+    Script: |
+      bonus bDex,7;
+      bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player_Human,4;
+  - Id: 35078
+    AegisName: "Aura_Lighthalzen_Blue: I"
+    Name: "Mortelle Aura: I"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3563
+    Script: |
+      bonus bLuk,3;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35079
+    AegisName: "Aura_Lighthalzen_Blue: II"
+    Name: "Mortelle Aura: II"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3563
+    Script: |
+      bonus bLuk,5;
+      bonus2 bSubRace,RC_DemiHuman,2; bonus2 bSubRace,RC_Player_Human,2;
+  - Id: 35080
+    AegisName: "Aura_Lighthalzen_Blue: III"
+    Name: "Mortelle Aura: III"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3563
+    Script: |
+      bonus bLuk,5;
+      bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player_Human,3;
+  - Id: 35081
+    AegisName: "Aura_Lighthalzen_Blue: IV"
+    Name: "Mortelle Aura: IV"
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3563
+    Script: |
+      bonus bLuk,7;
+      bonus2 bSubRace,RC_DemiHuman,4; bonus2 bSubRace,RC_Player_Human,4;
+  - Id: 35082
+    AegisName: Mid_Sharingan
+    Name: Sharingan Eyes
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3564
+  - Id: 35083
+    AegisName: Mid_Byakugan
+    Name: Byakugan Eyes
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3565
+  - Id: 35084
+    AegisName: Mid_Rinnegan
+    Name: Rinnegan Eyes
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3566
+  - Id: 35085
+    AegisName: Mid_Magina_Blindfold
+    Name: Magina Blindfold
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3567
+  - Id: 35086
+    AegisName: Mid_Robot
+    Name: Robot Ears
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    Classes:
+      All_Third: true
+      Normal: true
+      Upper: true
+      Baby: true
+    Locations:
+      Head_Mid: true
+    EquipLevelMin: 1
+    ArmorLevel: 1
+    View: 3568
